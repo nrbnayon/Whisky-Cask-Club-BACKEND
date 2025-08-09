@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/jsonwebtoken": "^9.0.10",
@@ -39,7 +40,6 @@
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "whisky-backend": "file:",
     "express": "^5.0.3",
     "http-status-codes": "^2.3.0",
     "i": "^0.3.7",
@@ -53,6 +53,7 @@
     "npm": "^11.5.2",
     "socket.io": "^4.8.1",
     "stripe": "^18.4.0",
+    "whisky-backend": "file:",
     "winston": "^3.17.0",
     "winston-daily-rotate-file": "^5.0.0",
     "zod": "^4.0.16"

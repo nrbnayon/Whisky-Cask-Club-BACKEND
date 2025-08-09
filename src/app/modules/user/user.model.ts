@@ -1,3 +1,4 @@
+// src\app\modules\user\user.model.ts
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import bcrypt from 'bcrypt';
 import { StatusCodes } from 'http-status-codes';
@@ -8,11 +9,16 @@ import AppError from '../../errors/AppError';
 
 const userSchema = new Schema<IUser, UserModal>(
   {
-    name: {
+    full_name: {
       type: String,
       required: true,
     },
-    email: {
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    email_address: {
       type: String,
       required: true,
       unique: true,
@@ -33,7 +39,11 @@ const userSchema = new Schema<IUser, UserModal>(
       select: 0,
       minlength: 8,
     },
-    phone: {
+    phone_number: {
+      type: String,
+      default: '',
+    },
+    phone_country_code: {
       type: String,
       default: '',
     },
@@ -95,7 +105,7 @@ userSchema.statics.isMatchPassword = async (
 //check user
 userSchema.pre('save', async function (next) {
   //check user
-  const isExist = await User.findOne({ email: this.email });
+  const isExist = await User.findOne({ email_address: this.email_address });
   if (isExist) {
     throw new AppError(StatusCodes.BAD_REQUEST, 'Email already used');
   }

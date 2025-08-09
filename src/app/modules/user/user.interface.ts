@@ -3,9 +3,9 @@
 import { Model } from 'mongoose';
 
 export type IUser = {
-  name: string;
-  email: string;
-  phone: string;
+  full_name: string;
+  email_address: string;
+  phone_number?: string;
   password: string;
   isDeleted?: boolean;
   image?: string;
@@ -16,6 +16,7 @@ export type IUser = {
     expireAt: Date;
   };
   verified: boolean;
+  [key: string]: unknown;
 };
 
 export type UserModal = {

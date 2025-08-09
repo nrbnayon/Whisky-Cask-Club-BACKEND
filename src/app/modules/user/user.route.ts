@@ -8,7 +8,7 @@ import validateRequest from '../../middlewares/validateRequest';
 const router = express.Router();
 
 router.post(
-  '/create-user',
+  '/sign-up',
   validateRequest(UserValidation.createUserSchema),
   UserController.createUser,
 );

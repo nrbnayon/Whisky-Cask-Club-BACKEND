@@ -2,9 +2,9 @@ import { z } from 'zod';
 
 const createUserSchema = z.object({
   body: z.object({
-    name: z.string().min(1, 'Name is required'),
-    email: z.string().email('Invalid email address'),
-    phone: z.string(),
+    full_name: z.string().min(1, 'Name is required'),
+    email_address: z.string().email('Invalid email address'),
+    phone_number: z.string().optional(),
     password: z.string().min(8, 'Password must have at least 8 characters'),
   }),
 });
@@ -21,8 +21,8 @@ const updateUserProfileSchema = z.object({
 
 const updateLocationZodSchema = z.object({
   body: z.object({
-    longitude: z.string({ required_error: 'Longitude is required' }),
-    latitude: z.string({ required_error: 'Latitude is required' }),
+    longitude: z.string({ message: 'Longitude is required' }),
+    latitude: z.string({ message: 'Latitude is required' }),
   }),
 });
 
