@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "D:\\Nayon xD\\Full Stack Project\\Whisky\\Backend\\logs\\combined\\.f4ec377a3ce83d00033dcb1aceb38fb99872cef6-audit.json",
+    "files": [
+        {
+            "date": 1754732760665,
+            "name": "D:\\Nayon xD\\Full Stack Project\\Whisky\\Backend\\logs\\combined\\2025-08-09-combined.log",
+            "hash": "3f78e696d7248843d600317ef779d127bd0a6c721aafa5005e68300fd7d7199c"
+        }
+    ],
+    "hashType": "sha256"
+}

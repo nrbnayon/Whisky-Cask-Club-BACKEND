@@ -31,7 +31,7 @@ app.use('/api/v1', router);
 //live response
 app.get('/', (req: Request, res: Response) => {
   res.send(
-    '<h1 style="text-align:center; color:#A55FEF; font-family:Verdana;">Hay Ozzy how can i assist you</h1>',
+    '<h1 style="text-align:center; color:#A55FEF; font-family:Verdana;">Hay, how can i assist you</h1>',
   );
 });
 

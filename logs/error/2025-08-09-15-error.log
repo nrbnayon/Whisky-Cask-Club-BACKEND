@@ -1,0 +1,24 @@
+09/08/2025 09:47:14 [nrb-nayon] ERROR: 127.0.0.1 - POST /api/v1/users/sign-up 404 - 9.998 ms
+09/08/2025 09:48:09 [nrb-nayon] ERROR: 🚨 globalErrorHandler ~~  User validation failed: username: Path `username` is required.
+ValidationError: User validation failed: username: Path `username` is required.
+    at model.Document.invalidate (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongoose@8.17.1\node_modules\mongoose\lib\document.js:3358:32)
+    at D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongoose@8.17.1\node_modules\mongoose\lib\document.js:3119:17
+    at D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongoose@8.17.1\node_modules\mongoose\lib\schemaType.js:1410:9
+    at processTicksAndRejections (node:internal/process/task_queues:85:11)
+09/08/2025 09:48:09 [nrb-nayon] ERROR: 127.0.0.1 - POST /api/v1/user/sign-up 400 - 17.951 ms
+09/08/2025 09:48:51 [nrb-nayon] ERROR: 🚨 globalErrorHandler ~~  E11000 duplicate key error collection: WhiskyCaskClubAPP.users index: username_1 dup key: { username: null }
+MongoServerError: E11000 duplicate key error collection: WhiskyCaskClubAPP.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.execute (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongodb@6.18.0\node_modules\mongodb\src\operations\insert.ts:88:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at tryOperation (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongodb@6.18.0\node_modules\mongodb\src\operations\execute_operation.ts:283:14)
+    at executeOperation (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongodb@6.18.0\node_modules\mongodb\src\operations\execute_operation.ts:115:12)
+    at Collection.insertOne (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongodb@6.18.0\node_modules\mongodb\src\collection.ts:286:12)
+09/08/2025 09:48:51 [nrb-nayon] ERROR: 127.0.0.1 - POST /api/v1/user/sign-up 400 - 428.913 ms
+09/08/2025 09:49:20 [nrb-nayon] ERROR: 🚨 globalErrorHandler ~~  E11000 duplicate key error collection: WhiskyCaskClubAPP.users index: username_1 dup key: { username: null }
+MongoServerError: E11000 duplicate key error collection: WhiskyCaskClubAPP.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.execute (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongodb@6.18.0\node_modules\mongodb\src\operations\insert.ts:88:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at tryOperation (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongodb@6.18.0\node_modules\mongodb\src\operations\execute_operation.ts:283:14)
+    at executeOperation (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongodb@6.18.0\node_modules\mongodb\src\operations\execute_operation.ts:115:12)
+    at Collection.insertOne (D:\Nayon xD\Full Stack Project\Whisky\Backend\node_modules\.pnpm\mongodb@6.18.0\node_modules\mongodb\src\collection.ts:286:12)
+09/08/2025 09:49:20 [nrb-nayon] ERROR: 127.0.0.1 - POST /api/v1/user/sign-up 400 - 425.040 ms

@@ -13,11 +13,6 @@ const userSchema = new Schema<IUser, UserModal>(
       type: String,
       required: true,
     },
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-    },
     email_address: {
       type: String,
       required: true,

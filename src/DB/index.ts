@@ -5,13 +5,13 @@ import { logger } from '../shared/logger';
 import { User } from '../app/modules/user/user.model';
 
 const superUser = {
-  name: 'matteapen',
+  full_name: config.admin.name,
   role: USER_ROLES.ADMIN,
-  email: config.admin.email,
+  email_address: config.admin.email,
   password: config.admin.password,
-  phone: '',
+  phone_number: '',
   verified: true,
-  gender: 'MALE',
+  isDeleted: false,
 };
 
 const seedAdmin = async () => {
