@@ -9,7 +9,7 @@
 
     // "outFile": "./",
     "outDir": "./dist",
-
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 

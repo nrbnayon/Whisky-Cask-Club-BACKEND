@@ -15,6 +15,7 @@ import AppError from '../../errors/AppError';
 
 const createUserFromDb = async (payload: IUser) => {
   payload.role = USER_ROLES.USER;
+  // console.log('New user sign up data payload::', payload);
   const result = await User.create(payload);
 
   if (!result) {
@@ -23,9 +24,9 @@ const createUserFromDb = async (payload: IUser) => {
 
   const otp = generateOTP();
   const emailValues = {
-    name: result.name,
+    name: result.full_name,
     otp,
-    email: result.email,
+    email: result.email_address,
   };
 
   const accountEmailTemplate = emailTemplate.createAccount(emailValues);

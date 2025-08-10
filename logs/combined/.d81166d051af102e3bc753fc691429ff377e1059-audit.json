@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "D:\\Whisky-Cask-Club-BACKEND\\logs\\combined\\.d81166d051af102e3bc753fc691429ff377e1059-audit.json",
+    "files": [
+        {
+            "date": 1754753286207,
+            "name": "D:\\Whisky-Cask-Club-BACKEND\\logs\\combined\\2025-08-09-combined.log",
+            "hash": "e7140695435b5e3df57e95da78a8befb1b3e62eb2c4b261b87ee395c0d201314"
+        },
+        {
+            "date": 1754809682575,
+            "name": "D:\\Whisky-Cask-Club-BACKEND\\logs\\combined\\2025-08-10-combined.log",
+            "hash": "d8340aaa09c3315ebb13fe226286355445f9f0f1e281946155e81f1ad0165904"
+        }
+    ],
+    "hashType": "sha256"
+}

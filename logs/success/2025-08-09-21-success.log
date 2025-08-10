@@ -1,0 +1,26 @@
+09/08/2025 15:28:08 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:28:08 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:36:42 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:36:42 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:38:03 [nrb-nayon] INFO: 127.0.0.1 - POST /api/v1/user/sign-up 200 - 979.159 ms
+09/08/2025 15:39:22 [nrb-nayon] INFO: 127.0.0.1 - POST /api/v1/user/sign-up 200 - 825.212 ms
+09/08/2025 15:39:45 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:39:46 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:40:12 [nrb-nayon] INFO: 127.0.0.1 - POST /api/v1/user/sign-up 200 - 1069.459 ms
+09/08/2025 15:47:37 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:47:37 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:47:44 [nrb-nayon] INFO: 127.0.0.1 - POST /api/v1/user/sign-up 200 - 826.452 ms
+09/08/2025 15:50:15 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:50:15 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:53:09 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:53:10 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:53:25 [nrb-nayon] INFO: 127.0.0.1 - POST /api/v1/user/sign-up 200 - 1079.343 ms
+09/08/2025 15:53:28 [nrb-nayon] INFO: Mail send successfully
+09/08/2025 15:53:49 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:53:49 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:54:33 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:54:33 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:54:58 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:54:58 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+09/08/2025 15:59:36 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+09/08/2025 15:59:36 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m

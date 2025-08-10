@@ -1,13 +1,15 @@
-export type ICreateAccount = {
-  name: string;
-  email: string;
-  otp: number;
-};
+// src/types/emailTemplate.ts
 
-export type IResetPassword = {
+export interface ICreateAccount {
+  email: string;
+  name: string;
+  otp: number;
+}
+
+export interface IResetPassword {
   email: string;
   otp: number;
-};
+}
 
 export interface INewsletterSubscriber {
   email: string;

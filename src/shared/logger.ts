@@ -1,3 +1,4 @@
+// src/shared/logger.ts
 import path from 'path';
 import { createLogger, format, transports } from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
@@ -91,7 +92,7 @@ const logger = createLogger({
   transports: [
     // Console transport with colors
     new transports.Console({
-      format: combine(consoleFormat),
+      format: combine(colorize(), consoleFormat),
       handleExceptions: true,
       handleRejections: true,
     }),
@@ -130,7 +131,7 @@ const errorLogger = createLogger({
   transports: [
     // Console transport with colors for errors
     new transports.Console({
-      format: combine(consoleFormat),
+      format: combine(colorize(), consoleFormat),
       level: 'error',
       handleExceptions: true,
       handleRejections: true,

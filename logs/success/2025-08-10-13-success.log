@@ -1,0 +1,20 @@
+10/08/2025 07:08:02 [nrb-nayon] INFO: 127.0.0.1 - POST /api/v1/auth/resend-otp 200 - 822.978 ms
+10/08/2025 07:08:05 [nrb-nayon] INFO: Mail send successfully
+10/08/2025 07:11:45 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+10/08/2025 07:11:45 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+10/08/2025 07:17:01 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+10/08/2025 07:17:01 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+10/08/2025 07:17:43 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+10/08/2025 07:17:43 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+10/08/2025 07:17:51 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+10/08/2025 07:17:51 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+10/08/2025 07:20:58 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+10/08/2025 07:20:58 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+10/08/2025 07:25:13 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+10/08/2025 07:25:13 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+10/08/2025 07:25:57 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+10/08/2025 07:25:57 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+10/08/2025 07:26:01 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+10/08/2025 07:26:01 [nrb-nayon] INFO: [33m♻️  Application listening on port:5000[39m
+10/08/2025 07:26:14 [nrb-nayon] INFO: 127.0.0.1 - POST /api/v1/auth/resend-otp 200 - 214.209 ms
+10/08/2025 07:26:17 [nrb-nayon] INFO: Mail send successfully

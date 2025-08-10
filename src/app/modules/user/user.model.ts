@@ -78,8 +78,8 @@ userSchema.statics.isExistUserById = async (id: string) => {
   return isExist;
 };
 
-userSchema.statics.isExistUserByEmail = async (email: string) => {
-  const isExist = await User.findOne({ email });
+userSchema.statics.isExistUserByEmail = async (email_address: string) => {
+  const isExist = await User.findOne({ email_address });
   return isExist;
 };
 

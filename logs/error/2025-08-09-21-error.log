@@ -1,0 +1,39 @@
+09/08/2025 15:38:03 [nrb-nayon] ERROR: Email getaddrinfo ENOTFOUND smtp.example.com
+Error: getaddrinfo ENOTFOUND smtp.example.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)
+09/08/2025 15:38:59 [nrb-nayon] ERROR: 🚨 globalErrorHandler ~~  Email already used
+Error: Email already used
+    at model.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\user\user.model.ts:105:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+09/08/2025 15:38:59 [nrb-nayon] ERROR: 127.0.0.1 - POST /api/v1/user/sign-up 400 - 107.705 ms
+09/08/2025 15:39:22 [nrb-nayon] ERROR: Email getaddrinfo ENOTFOUND smtp.example.com
+Error: getaddrinfo ENOTFOUND smtp.example.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)
+09/08/2025 15:40:13 [nrb-nayon] ERROR: Email Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76c2db932fdsm8815839b3a.21 - gsmtp
+Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76c2db932fdsm8815839b3a.21 - gsmtp
+    at SMTPConnection._formatError (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:809:19)
+    at SMTPConnection._actionAUTHComplete (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:1588:34)
+    at SMTPConnection.<anonymous> (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:556:26)
+    at SMTPConnection._processResponse (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:993:20)
+    at SMTPConnection._onData (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:774:14)
+    at TLSSocket.SMTPConnection._onSocketData (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at TLSSocket.Readable.push (node:internal/streams/readable:390:5)
+09/08/2025 15:47:45 [nrb-nayon] ERROR: Email Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76bcce6f319sm22833301b3a.18 - gsmtp
+Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76bcce6f319sm22833301b3a.18 - gsmtp
+    at SMTPConnection._formatError (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:809:19)
+    at SMTPConnection._actionAUTHComplete (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:1588:34)
+    at SMTPConnection.<anonymous> (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:556:26)
+    at SMTPConnection._processResponse (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:993:20)
+    at SMTPConnection._onData (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:774:14)
+    at TLSSocket.SMTPConnection._onSocketData (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\nodemailer@7.0.5\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at TLSSocket.Readable.push (node:internal/streams/readable:390:5)

@@ -14,8 +14,8 @@ const createUserSchema = z.object({
 //* change some system
 const updateUserProfileSchema = z.object({
   body: z.object({
-    name: z.string().optional(),
-    phone: z.string().optional(),
+    email_address: z.string().optional(),
+    phone_number: z.string().optional(),
   }),
 });
 
