@@ -45,7 +45,7 @@ const getAllBlogs = async (query: Record<string, unknown>) => {
   const blogs = await Blog.find()
     .skip(skip)
     .limit(size)
-    .populate('author', 'full_name email_address');
+    .populate('author', 'fullName email');
 
   const totalBlogs = await Blog.countDocuments();
   const totalPages = Math.ceil(totalBlogs / size);
@@ -65,7 +65,7 @@ const getAllBlogs = async (query: Record<string, unknown>) => {
 const getBlogById = async (id: string) => {
   const existBlog = await Blog.findById(id).populate(
     'author',
-    'full_name email_address',
+    'fullName email',
   );
 
   if (!existBlog) {

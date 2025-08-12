@@ -6,14 +6,15 @@ import { model, Schema } from 'mongoose';
 import config from '../../../config';
 import { IUser, UserModal } from './user.interface';
 import AppError from '../../errors/AppError';
+import { STATUS } from 'enums/user';
 
 const userSchema = new Schema<IUser, UserModal>(
   {
-    full_name: {
+    fullName: {
       type: String,
       required: true,
     },
-    email_address: {
+    email: {
       type: String,
       required: true,
       unique: true,
@@ -27,6 +28,11 @@ const userSchema = new Schema<IUser, UserModal>(
       type: String,
       default: 'USER',
       enum: ['USER', 'ADMIN'],
+    },
+    status: {
+      type: String,
+      default: STATUS.ACTIVE,
+      enum: Object.values(STATUS),
     },
     password: {
       type: String,
@@ -78,8 +84,8 @@ userSchema.statics.isExistUserById = async (id: string) => {
   return isExist;
 };
 
-userSchema.statics.isExistUserByEmail = async (email_address: string) => {
-  const isExist = await User.findOne({ email_address });
+userSchema.statics.isExistUserByEmail = async (email: string) => {
+  const isExist = await User.findOne({ email });
   return isExist;
 };
 
@@ -100,7 +106,7 @@ userSchema.statics.isMatchPassword = async (
 //check user
 userSchema.pre('save', async function (next) {
   //check user
-  const isExist = await User.findOne({ email_address: this.email_address });
+  const isExist = await User.findOne({ email: this.email });
   if (isExist) {
     throw new AppError(StatusCodes.BAD_REQUEST, 'Email already used');
   }

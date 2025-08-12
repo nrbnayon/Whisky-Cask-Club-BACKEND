@@ -5,9 +5,9 @@ import { logger } from '../shared/logger';
 import { User } from '../app/modules/user/user.model';
 
 const superUser = {
-  full_name: config.admin.name,
+  fullName: config.admin.name,
   role: USER_ROLES.ADMIN,
-  email_address: config.admin.email,
+  email: config.admin.email,
   password: config.admin.password,
   phone_number: '',
   verified: true,

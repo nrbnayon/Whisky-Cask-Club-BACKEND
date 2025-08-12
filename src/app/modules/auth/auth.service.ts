@@ -25,8 +25,8 @@ import { downloadImage, facebookToken } from './auth.lib';
 
 //login
 const loginUserFromDB = async (payload: ILoginData) => {
-  const { email_address, password } = payload;
-  const isExistUser = await User.findOne({ email_address }).select('+password');
+  const { email, password } = payload;
+  const isExistUser = await User.findOne({ email }).select('+password');
   if (!isExistUser) {
     throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
   }
@@ -50,7 +50,7 @@ const loginUserFromDB = async (payload: ILoginData) => {
   const tokenPayload = {
     id: isExistUser._id,
     role: isExistUser.role,
-    email_address: isExistUser.email_address,
+    email: isExistUser.email,
   };
 
   //create access token
@@ -74,8 +74,8 @@ const loginUserFromDB = async (payload: ILoginData) => {
 };
 
 //forget password
-const forgetPasswordToDB = async (email_address: string) => {
-  const isExistUser = await User.isExistUserByEmail(email_address);
+const forgetPasswordToDB = async (email: string) => {
+  const isExistUser = await User.isExistUserByEmail(email);
   if (!isExistUser) {
     throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
   }
@@ -84,7 +84,7 @@ const forgetPasswordToDB = async (email_address: string) => {
   const otp = generateOTP();
   const value = {
     otp,
-    email: isExistUser.email_address,
+    email: isExistUser.email,
   };
   const forgetPassword = emailTemplate.resetPassword(value);
   emailHelper.sendEmail(forgetPassword);
@@ -94,15 +94,13 @@ const forgetPasswordToDB = async (email_address: string) => {
     oneTimeCode: otp,
     expireAt: new Date(Date.now() + 20 * 60000),
   };
-  await User.findOneAndUpdate({ email_address }, { $set: { authentication } });
+  await User.findOneAndUpdate({ email }, { $set: { authentication } });
 };
 
 const verifyEmailToDB = async (payload: IVerifyEmail) => {
-  const { email_address, oneTimeCode } = payload;
+  const { email, oneTimeCode } = payload;
 
-  const isExistUser = await User.findOne({ email_address }).select(
-    '+authentication',
-  );
+  const isExistUser = await User.findOne({ email }).select('+authentication');
   if (!isExistUser) {
     throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
   }
@@ -130,7 +128,7 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
   const tokenPayload = {
     id: isExistUser._id,
     role: isExistUser.role,
-    email_address: isExistUser.email_address,
+    email: isExistUser.email,
   };
 
   //create access token
@@ -316,7 +314,7 @@ const newAccessTokenToUser = async (token: string) => {
     {
       id: isExistUser._id,
       role: isExistUser.role,
-      email_address: isExistUser.email_address,
+      email: isExistUser.email,
     },
     config.jwt.jwt_secret as Secret,
     config.jwt.jwt_expire_in as string,
@@ -325,10 +323,10 @@ const newAccessTokenToUser = async (token: string) => {
   return { accessToken };
 };
 
-const resendVerificationEmailToDB = async (email_address: string) => {
+const resendVerificationEmailToDB = async (email: string) => {
   // Find the user by ID
   const existingUser: any = await User.findOne({
-    email_address: email_address,
+    email: email,
   }).lean();
 
   if (!existingUser) {
@@ -345,9 +343,9 @@ const resendVerificationEmailToDB = async (email_address: string) => {
   // Generate OTP and prepare email
   const otp = generateOTP();
   const emailValues = {
-    name: existingUser.full_name,
+    name: existingUser.fullName,
     otp,
-    email: existingUser.email_address,
+    email: existingUser.email,
   };
   const accountEmailTemplate = emailTemplate.createAccount(emailValues);
   emailHelper.sendEmail(accountEmailTemplate);
@@ -359,7 +357,7 @@ const resendVerificationEmailToDB = async (email_address: string) => {
   };
 
   await User.findOneAndUpdate(
-    { email_address: email_address },
+    { email: email },
     { $set: { authentication } },
     { new: true },
   );
@@ -391,7 +389,7 @@ const resendVerificationEmailToDB = async (email_address: string) => {
 //   if (!user) {
 //     // Create new user if doesn't exist
 //     user = await User.create({
-//       email_address,
+//       email,
 //       name,
 //       image: image || '',
 //       googleId: uid,
@@ -483,7 +481,7 @@ const resendVerificationEmailToDB = async (email_address: string) => {
 //     };
 
 //     let user = await User.findOne({
-//       $or: [{ email: userData.email_address }, { facebookId: userData.id }],
+//       $or: [{ email: userData.email }, { facebookId: userData.id }],
 //     });
 
 //     if (user?.image && localImage) {
@@ -498,7 +496,7 @@ const resendVerificationEmailToDB = async (email_address: string) => {
 //         {
 //           ...userFields,
 //           image: userFields.image || user.image,
-//           name: userFields.name || user.full_name,
+//           name: userFields.name || user.fullName,
 //         },
 //         { new: true },
 //       );

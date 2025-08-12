@@ -3,13 +3,14 @@
 import { Model } from 'mongoose';
 
 export type IUser = {
-  full_name: string;
-  email_address: string;
+  fullName: string;
+  email: string;
   phone_number?: string;
   password: string;
   isDeleted?: boolean;
   image?: string;
   role?: string;
+  status?:string,
   authentication?: {
     isResetPassword: boolean;
     oneTimeCode: number;
@@ -21,7 +22,7 @@ export type IUser = {
 
 export type UserModal = {
   isExistUserById(id: string): any;
-  isExistUserByEmail(email_address: string): any;
+  isExistUserByEmail(email: string): any;
   isAccountCreated(id: string): any;
   isMatchPassword(password: string, hashPassword: string): boolean;
 } & Model<IUser>;

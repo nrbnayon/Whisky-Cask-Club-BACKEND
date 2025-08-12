@@ -2,8 +2,8 @@ import { z } from 'zod';
 
 const createUserSchema = z.object({
   body: z.object({
-    full_name: z.string().min(1, 'Name is required'),
-    email_address: z.string().email('Invalid email address'),
+    fullName: z.string().min(1, 'Name is required'),
+    email: z.string().email('Invalid email address'),
     phone_number: z.string().optional(),
     password: z.string().min(8, 'Password must have at least 8 characters'),
   }),
@@ -14,7 +14,7 @@ const createUserSchema = z.object({
 //* change some system
 const updateUserProfileSchema = z.object({
   body: z.object({
-    email_address: z.string().optional(),
+    email: z.string().optional(),
     phone_number: z.string().optional(),
   }),
 });

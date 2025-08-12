@@ -24,9 +24,9 @@ const createUserFromDb = async (payload: IUser) => {
 
   const otp = generateOTP();
   const emailValues = {
-    name: result.full_name,
+    name: result.fullName,
     otp,
-    email: result.email_address,
+    email: result.email,
   };
 
   const accountEmailTemplate = emailTemplate.createAccount(emailValues);
