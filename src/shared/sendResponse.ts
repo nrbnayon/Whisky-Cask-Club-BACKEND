@@ -11,6 +11,13 @@ type IData<T> = {
     totalPage: number;
     total: number;
   };
+  meta?: {
+    page: number;
+    limit: number;
+    totalPage: number;
+    total: number;
+    [key: string]: unknown;
+  };
   data?: T;
 };
 
@@ -19,6 +26,7 @@ const sendResponse = <T>(res: Response, data: IData<T>) => {
     success: data.success,
     message: data.message,
     pagination: data.pagination,
+    meta: data.meta, 
     paymentIntent: data.paymentIntent,
     data: data.data,
   };

@@ -1,6 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-unused-vars */
 import { StatusCodes } from 'http-status-codes';
 import { JwtPayload } from 'jsonwebtoken';
 import { USER_ROLES } from '../../../enums/user';
@@ -68,6 +65,16 @@ const getAllUsers = async (query: Record<string, unknown>) => {
     page: pages,
     limit: size,
   };
+};
+
+const getMe = async (userId: string): Promise<Partial<IUser>> => {
+  const user = await User.findById(userId).lean({
+    virtuals: true,
+  });
+  if (!user) {
+    throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
+  }
+  return user;
 };
 
 const getUserProfileFromDB = async (
@@ -139,6 +146,7 @@ const searchUserByPhone = async (searchTerm: string, userId: string) => {
 export const UserService = {
   createUserFromDb,
   getUserProfileFromDB,
+  getMe,
   updateProfileToDB,
   getSingleUser,
   searchUserByPhone,

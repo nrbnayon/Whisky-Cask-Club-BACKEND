@@ -6,4 +6,5 @@ export interface IBlog extends Document {
   author: Types.ObjectId;
   date: Date;
   image?: string;
+  [key: string]: unknown;
 }

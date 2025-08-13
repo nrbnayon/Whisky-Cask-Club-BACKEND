@@ -5,6 +5,7 @@ import fileUploadHandler from '../../middlewares/fileUploadHandler';
 import { UserController } from './user.controller';
 import { UserValidation } from './user.validation';
 import validateRequest from '../../middlewares/validateRequest';
+import auth from 'app/middlewares/auth';
 const router = express.Router();
 
 router.post(
@@ -27,6 +28,8 @@ router.post(
 );
 
 router.get('/user', UserController.getUserProfile);
+
+router.get('/me', auth(), UserController.getMe);
 
 router.get('/get-single-user/:id', UserController.getSingleUser);
 

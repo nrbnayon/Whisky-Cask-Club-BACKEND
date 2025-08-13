@@ -1,12 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-unused-vars */
-import {  Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { UserService } from './user.service';
-import getFilePath from '../../../shared/getFilePath';
-import fs from 'fs';
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
   const value = {
@@ -29,6 +25,18 @@ const getAllUser = catchAsync(async (req: Request, res: Response) => {
     success: true,
     statusCode: StatusCodes.OK,
     message: 'all user retrieved successfully',
+    data: result,
+  });
+});
+
+//get me
+const getMe = catchAsync(async (req: Request, res: Response) => {
+  const userId = req.user?.id;
+  const result = await UserService.getMe(userId);
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'User retrieved successfully',
     data: result,
   });
 });
@@ -100,6 +108,7 @@ const searchByPhone = catchAsync(async (req: Request, res: Response) => {
 export const UserController = {
   createUser,
   getUserProfile,
+  getMe,
   updateProfile,
   searchByPhone,
   getSingleUser,
