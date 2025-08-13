@@ -1,6 +1,6 @@
 {
-  "name": "whisky-backend",
-  "version": "1.0.0",
+  "name": "backend-template",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nrbnayon.com"
+  },
+  "homepage": "https://github.com/nrbnayon.com",
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
@@ -38,6 +42,8 @@
     "@types/cookie-parser": "^1.4.8",
     "@types/node-cron": "^3.0.11",
     "axios": "^1.11.0",
+    "compression": "^1.8.0",
+    "cookie-parser": "^1.4.7",
     "bcrypt": "^6.0.0",
     "chalk": "4.1.2",
     "colors": "^1.4.0",

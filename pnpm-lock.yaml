@@ -26,6 +26,12 @@ importers:
       colors:
         specifier: ^1.4.0
         version: 1.4.0
+      compression:
+        specifier: ^1.8.0
+        version: 1.8.1
+      cookie-parser:
+        specifier: ^1.4.7
+        version: 1.4.7
       cors:
         specifier: ^2.8.5
         version: 2.8.5
@@ -82,7 +88,7 @@ importers:
         version: 18.4.0(@types/node@24.2.1)
       whisky-backend:
         specifier: 'file:'
-        version: file:(@types/express@5.0.3)(@types/node@24.2.1)
+        version: backend-template@file:(@types/express@5.0.3)(@types/node@24.2.1)
       winston:
         specifier: ^3.17.0
         version: 3.17.0
@@ -678,6 +684,9 @@ packages:
   axios@1.11.0:
     resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
 
+  'backend-template@file:':
+    resolution: {directory: '', type: directory}
+
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
@@ -692,10 +701,6 @@ packages:
   bcrypt@6.0.0:
     resolution: {integrity: sha512-cU8v/EGSrnH+HnxV2z0J7/blxH8gq7Xh2JFT6Aroax7UohdmiJJlxApMxtKfuI7z68NvvVcmR78k2LbT6efhRg==}
     engines: {node: '>= 18'}
-
-  bcryptjs@3.0.2:
-    resolution: {integrity: sha512-k38b3XOZKv60C4E2hVsXTolJWfkGRMbILBIe2IBITXciy5bOsTKot5kDrf3ZfufQtQOUN5mXceUEpU1rTl9Uog==}
-    hasBin: true
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -799,6 +804,14 @@ packages:
     resolution: {integrity: sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==}
     engines: {node: '>=4.0.0'}
 
+  compressible@2.0.18:
+    resolution: {integrity: sha512-AF3r7P5dWxL8MxyITRMlORQNaOA2IkAFaTr4k7BUumjPtRpGDTZpl0Pb1XCO6JeDCBdp126Cgs9sMxqSjgYyRg==}
+    engines: {node: '>= 0.6'}
+
+  compression@1.8.1:
+    resolution: {integrity: sha512-9mAqGPHLakhCLeNyxPkK4xVo746zQ/czLH1Ky+vkitMnWfWZps8r0qXuwhwizagCRttsL4lfG4pIOvaWLpAP0w==}
+    engines: {node: '>= 0.8.0'}
+
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
@@ -813,6 +826,13 @@ packages:
   content-type@1.0.5:
     resolution: {integrity: sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==}
     engines: {node: '>= 0.6'}
+
+  cookie-parser@1.4.7:
+    resolution: {integrity: sha512-nGUvgXnotP3BsjiLX2ypbQnWoGUPIIfHQNZkkC668ntrzGWEZVW70HDEB1qnNGMicPje6EttlIgzo51YSwNQGw==}
+    engines: {node: '>= 0.8.0'}
+
+  cookie-signature@1.0.6:
+    resolution: {integrity: sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==}
 
   cookie-signature@1.2.2:
     resolution: {integrity: sha512-D76uU73ulSXrD1UXF4KE2TMxVVwhsnCgfAyTg9k8P6KGZjlXKrOLe4dJQKI3Bxi5wjesZoFXJWElNWBjPZMbhg==}
@@ -1488,6 +1508,10 @@ packages:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
 
+  negotiator@0.6.4:
+    resolution: {integrity: sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==}
+    engines: {node: '>= 0.6'}
+
   negotiator@1.0.0:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
@@ -2046,9 +2070,6 @@ packages:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
     hasBin: true
-
-  'whisky-backend@file:':
-    resolution: {directory: '', type: directory}
 
   winston-daily-rotate-file@5.0.0:
     resolution: {integrity: sha512-JDjiXXkM5qvwY06733vf09I2wnMXpZEhxEVOSPenZMii+g7pcDcTBt2MRugnoi8BwVSuCT2jfRXBUy+n1Zz/Yw==}
@@ -2654,6 +2675,52 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  backend-template@file:(@types/express@5.0.3)(@types/node@24.2.1):
+    dependencies:
+      '@types/cookie-parser': 1.4.9(@types/express@5.0.3)
+      '@types/node-cron': 3.0.11
+      axios: 1.11.0
+      bcrypt: 6.0.0
+      chalk: 4.1.2
+      colors: 1.4.0
+      compression: 1.8.1
+      cookie-parser: 1.4.7
+      cors: 2.8.5
+      dotenv: 17.2.1
+      express: 5.1.0
+      http-status-codes: 2.3.0
+      i: 0.3.7
+      jsonwebtoken: 9.0.2
+      mongoose: 8.17.1
+      mongoose-lean-virtuals: 1.1.1(mongoose@8.17.1)
+      morgan: 1.10.1
+      multer: 2.0.2
+      node-cron: 4.2.1
+      node-fetch: 3.3.2
+      nodemailer: 7.0.5
+      npm: 11.5.2
+      redis: 4.7.1
+      sharp: 0.34.3
+      socket.io: 4.8.1
+      stripe: 18.4.0(@types/node@24.2.1)
+      winston: 3.17.0
+      winston-daily-rotate-file: 5.0.0(winston@3.17.0)
+      zod: 4.0.16
+    transitivePeerDependencies:
+      - '@aws-sdk/credential-providers'
+      - '@mongodb-js/zstd'
+      - '@types/express'
+      - '@types/node'
+      - bufferutil
+      - debug
+      - gcp-metadata
+      - kerberos
+      - mongodb-client-encryption
+      - snappy
+      - socks
+      - supports-color
+      - utf-8-validate
+
   balanced-match@1.0.2: {}
 
   base64id@2.0.0: {}
@@ -2666,8 +2733,6 @@ snapshots:
     dependencies:
       node-addon-api: 8.5.0
       node-gyp-build: 4.8.4
-
-  bcryptjs@3.0.2: {}
 
   binary-extensions@2.3.0: {}
 
@@ -2789,6 +2854,22 @@ snapshots:
 
   common-tags@1.8.2: {}
 
+  compressible@2.0.18:
+    dependencies:
+      mime-db: 1.54.0
+
+  compression@1.8.1:
+    dependencies:
+      bytes: 3.1.2
+      compressible: 2.0.18
+      debug: 2.6.9
+      negotiator: 0.6.4
+      on-headers: 1.1.0
+      safe-buffer: 5.2.1
+      vary: 1.1.2
+    transitivePeerDependencies:
+      - supports-color
+
   concat-map@0.0.1: {}
 
   concat-stream@2.0.0:
@@ -2803,6 +2884,13 @@ snapshots:
       safe-buffer: 5.2.1
 
   content-type@1.0.5: {}
+
+  cookie-parser@1.4.7:
+    dependencies:
+      cookie: 0.7.2
+      cookie-signature: 1.0.6
+
+  cookie-signature@1.0.6: {}
 
   cookie-signature@1.2.2: {}
 
@@ -3519,6 +3607,8 @@ snapshots:
 
   negotiator@0.6.3: {}
 
+  negotiator@0.6.4: {}
+
   negotiator@1.0.0: {}
 
   node-addon-api@8.5.0: {}
@@ -4027,51 +4117,6 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
-
-  whisky-backend@file:(@types/express@5.0.3)(@types/node@24.2.1):
-    dependencies:
-      '@types/cookie-parser': 1.4.9(@types/express@5.0.3)
-      '@types/node-cron': 3.0.11
-      axios: 1.11.0
-      bcrypt: 6.0.0
-      bcryptjs: 3.0.2
-      chalk: 4.1.2
-      colors: 1.4.0
-      cors: 2.8.5
-      dotenv: 17.2.1
-      express: 5.1.0
-      http-status-codes: 2.3.0
-      i: 0.3.7
-      jsonwebtoken: 9.0.2
-      mongoose: 8.17.1
-      mongoose-lean-virtuals: 1.1.1(mongoose@8.17.1)
-      morgan: 1.10.1
-      multer: 2.0.2
-      node-cron: 4.2.1
-      node-fetch: 3.3.2
-      nodemailer: 7.0.5
-      npm: 11.5.2
-      redis: 4.7.1
-      sharp: 0.34.3
-      socket.io: 4.8.1
-      stripe: 18.4.0(@types/node@24.2.1)
-      winston: 3.17.0
-      winston-daily-rotate-file: 5.0.0(winston@3.17.0)
-      zod: 4.0.16
-    transitivePeerDependencies:
-      - '@aws-sdk/credential-providers'
-      - '@mongodb-js/zstd'
-      - '@types/express'
-      - '@types/node'
-      - bufferutil
-      - debug
-      - gcp-metadata
-      - kerberos
-      - mongodb-client-encryption
-      - snappy
-      - socks
-      - supports-color
-      - utf-8-validate
 
   winston-daily-rotate-file@5.0.0(winston@3.17.0):
     dependencies:

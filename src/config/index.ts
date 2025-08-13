@@ -9,6 +9,7 @@ export default {
   node_env: process.env.NODE_ENV,
   port: process.env.PORT,
   bcrypt_salt_rounds: process.env.BCRYPT_SALT_ROUNDS,
+  google_maps: process.env.GOOGLE_MAPS_API_KEY,
   jwt: {
     jwt_secret: process.env.JWT_SECRET,
     jwt_expire_in: process.env.JWT_EXPIRE_IN,
