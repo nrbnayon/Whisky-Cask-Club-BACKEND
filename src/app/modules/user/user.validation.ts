@@ -1,33 +1,54 @@
+// src/app/modules/user/user.validation.ts
 import { z } from 'zod';
+import { USER_ROLES, STATUS } from '../../../enums/user';
 
 const createUserSchema = z.object({
   body: z.object({
-    fullName: z.string().min(1, 'Name is required'),
+    fullName: z.string().min(1, 'Name is required').max(100, 'Name too long'),
     email: z.string().email('Invalid email address'),
-    phone_number: z.string().optional(),
+    phoneNumber: z.string().optional(),
+    phoneCountryCode: z.string().optional(),
     password: z.string().min(8, 'Password must have at least 8 characters'),
   }),
 });
 
-//TODO: need update more fields for this site
-
-//* change some system
 const updateUserProfileSchema = z.object({
   body: z.object({
-    email: z.string().optional(),
-    phone_number: z.string().optional(),
+    fullName: z.string().min(1).max(100).optional(),
+    phoneNumber: z.string().optional(),
+    phoneCountryCode: z.string().optional(),
   }),
 });
 
-const updateLocationZodSchema = z.object({
+const updateProfileImageSchema = z.object({
   body: z.object({
-    longitude: z.string({ message: 'Longitude is required' }),
-    latitude: z.string({ message: 'Latitude is required' }),
+    // Image will be handled by multer middleware
+  }),
+});
+
+const adminUpdateUserSchema = z.object({
+  body: z.object({
+    fullName: z.string().min(1).max(100).optional(),
+    email: z.string().email().optional(),
+    role: z.nativeEnum(USER_ROLES).optional(),
+    status: z.nativeEnum(STATUS).optional(),
+    phoneNumber: z.string().optional(),
+    phoneCountryCode: z.string().optional(),
+    verified: z.boolean().optional(),
+    isSubscribed: z.boolean().optional(),
+  }),
+});
+
+const changeUserStatusSchema = z.object({
+  body: z.object({
+    status: z.nativeEnum(STATUS),
   }),
 });
 
 export const UserValidation = {
   createUserSchema,
-  updateLocationZodSchema,
   updateUserProfileSchema,
+  updateProfileImageSchema,
+  adminUpdateUserSchema,
+  changeUserStatusSchema,
 };

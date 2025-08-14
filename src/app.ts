@@ -1,9 +1,11 @@
+// src\app.ts
 import cors from 'cors';
 import express, { Request, Response } from 'express';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import router from './routes';
 import { Morgan } from './shared/morgen';
 import notFoundRoute from './app/middlewares/notFoundRoute';
+import { SubscriptionController } from 'app/modules/subscription/subscription.controller';
 
 const app = express();
 
@@ -19,8 +21,17 @@ app.use(
   }),
 );
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Webhook handler with raw body parsing - MUST be before other body parsers
+app.post(
+  '/my-webhook/stripe',
+  express.raw({ type: 'application/json' }),
+  SubscriptionController.handleWebhook,
+);
+
+// JSON and text/plain content types
+app.use(express.json({ limit: '200mb' }));
+app.use(express.text({ type: 'text/plain', limit: '200mb' }));
+app.use(express.urlencoded({ extended: true, limit: '200mb' }));
 
 //file retrieve
 app.use(express.static('uploads'));

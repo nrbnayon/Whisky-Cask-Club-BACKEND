@@ -1,6 +1,7 @@
+// src\app\modules\subscription\subscription.interface.ts
 export interface ISubscrition {
   subscription?: {
-    plan: 'basic' | 'premium';
+    plan: 'free' | 'basic' | 'premium' | 'enterprise';
     status: string;
     price: number;
     autoRenew: boolean;

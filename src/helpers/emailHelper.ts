@@ -3,7 +3,7 @@ import config from '../config';
 import { errorLogger, logger } from '../shared/logger';
 import { ISendEmail } from '../types/email';
 
-const transporter = nodemailer.createTransport({
+export const transporter = nodemailer.createTransport({
   host: config.email.host,
   port: Number(config.email.port),
   secure: false,

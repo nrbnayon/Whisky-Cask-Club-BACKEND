@@ -17,6 +17,12 @@ export default {
     jwtRefreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN,
   },
 
+  stripe: {
+    secretKey: process.env.STRIPE_SECRET_KEY,
+    webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
+    localWebhookSecret: process.env.LOCAL_STRIPE_WEBHOOK_SECRET,
+  },
+
   email: {
     from: process.env.EMAIL_FROM,
     user: process.env.EMAIL_USER,

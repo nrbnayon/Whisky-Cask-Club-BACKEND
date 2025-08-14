@@ -1,41 +1,75 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import express, { NextFunction, Request, Response } from 'express';
+// src/app/modules/user/user.route.ts
+import express from 'express';
 import fileUploadHandler from '../../middlewares/fileUploadHandler';
-
 import { UserController } from './user.controller';
 import { UserValidation } from './user.validation';
 import validateRequest from '../../middlewares/validateRequest';
-import auth from 'app/middlewares/auth';
+import auth from '../../middlewares/auth';
+import { USER_ROLES } from '../../../enums/user';
+
 const router = express.Router();
 
+// Public routes
 router.post(
   '/sign-up',
   validateRequest(UserValidation.createUserSchema),
   UserController.createUser,
 );
 
-router.get('/all-user', UserController.getAllUser);
+// User routes (authenticated)
+router.get('/me', auth(), UserController.getMe);
 
-router.post(
-  '/update-profile',
+router.patch(
+  '/profile-update',
+  auth(),
   fileUploadHandler(),
-  (req: Request, res: Response, next: NextFunction) => {
-    req.body = JSON.parse(req.body.data);
-    next();
-  },
   validateRequest(UserValidation.updateUserProfileSchema),
   UserController.updateProfile,
 );
 
-router.get('/user', UserController.getUserProfile);
+router.patch(
+  '/profile-image',
+  auth(),
+  fileUploadHandler(),
+  validateRequest(UserValidation.updateProfileImageSchema),
+  UserController.updateProfileImage,
+);
 
-router.get('/me', auth(), UserController.getMe);
+router.delete('/account', auth(), UserController.deleteAccount);
 
-router.get('/get-single-user/:id', UserController.getSingleUser);
+router.get('/search', auth(), UserController.searchByPhone);
 
-// get user by search by phone
-router.get('/user-search', UserController.searchByPhone);
+// Admin routes
+router.get(
+  '/all',
+  auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+  UserController.getAllUser,
+);
 
-router.get('/profile', UserController.getUserProfile);
+router.get(
+  '/:id',
+  auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+  UserController.getSingleUser,
+);
+
+router.patch(
+  '/:id',
+  auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+  validateRequest(UserValidation.adminUpdateUserSchema),
+  UserController.adminUpdateUser,
+);
+
+router.patch(
+  '/:id/status',
+  auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+  validateRequest(UserValidation.changeUserStatusSchema),
+  UserController.changeUserStatus,
+);
+
+router.delete(
+  '/:id',
+  auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+  UserController.deleteAccount,
+);
 
 export const UserRoutes = router;

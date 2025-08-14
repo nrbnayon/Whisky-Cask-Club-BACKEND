@@ -1,3 +1,4 @@
+// src\app\modules\subscription\subscription.model.ts
 import mongoose, { model } from 'mongoose';
 import { ISubscrition } from './subscription.interface';
 

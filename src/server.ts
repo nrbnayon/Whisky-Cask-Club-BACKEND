@@ -23,9 +23,16 @@ async function main() {
     const port =
       typeof config.port === 'number' ? config.port : Number(config.port);
 
-    server = app.listen(port, config.ip_address as string, () => {
+    server = app.listen(Number(port), config.ip_address as string, () => {
+      // Enhanced console output with proper formatting
       logger.info(
-        colors.yellow(`♻️  Application listening on port:${config.port}`),
+        colors.yellow(`
+╔═════════════════════════════════════╗
+║  🚀 Server launched successfully!   ║
+║  🌐 Running on: ${config.ip_address as string}:${port!
+          .toString()
+          .padStart(4, ' ')}      ║
+╚═════════════════════════════════════╝`),
       );
     });
 

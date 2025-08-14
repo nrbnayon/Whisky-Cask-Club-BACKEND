@@ -7,6 +7,7 @@ import { aboutRoutes } from '../app/modules/aboutUs/aboutUs.route';
 import { tersmConditionRoutes } from '../app/modules/termsAndCondition/termsAndCondition.route';
 import { NewsLetterRoutes } from '../app/modules/newsLetter/newsLetter.route';
 import { BlogRoutes } from '../app/modules/blog/blog.route';
+import { SubscriptionRoutes } from 'app/modules/subscription/subscription.route';
 
 const router = express.Router();
 
@@ -19,6 +20,7 @@ const apiRoutes = [
   { path: '/terms', route: tersmConditionRoutes },
   { path: '/news-letter', route: NewsLetterRoutes },
   { path: '/blog', route: BlogRoutes },
+  { path: '/subscriptions', route: SubscriptionRoutes },
 ];
 
 apiRoutes.forEach(route => router.use(route.path, route.route));

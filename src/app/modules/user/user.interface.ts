@@ -1,36 +1,57 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-unused-vars */
-import { Model } from 'mongoose';
+// src/app/modules/user/user.interface.ts
+import { Document, Model } from 'mongoose';
+import { USER_ROLES, STATUS } from '../../../enums/user';
 
-export type IUser = {
+export interface ISubscription {
+  plan: string;
+  status:
+    | 'active'
+    | 'cancelled'
+    | 'past_due'
+    | 'unpaid'
+    | 'incomplete'
+    | 'trialing'
+    | 'expired';
+  price: number;
+  currency: string;
+  interval: 'day' | 'week' | 'month' | 'year';
+  autoRenew: boolean;
+  startDate: Date;
+  endDate: Date;
+  cancelAtPeriodEnd: boolean;
+  stripeSubscriptionId?: string;
+  stripeCustomerId?: string;
+  stripePriceId?: string;
+  trialEndDate?: Date;
+  metadata?: Record<string, any>;
+}
+
+export interface IUser extends Document {
   fullName: string;
   email: string;
-  phone_number?: string;
   password: string;
-  isDeleted?: boolean;
   image?: string;
-  role?: string;
-  status?:string,
-  authentication?: {
-    isResetPassword: boolean;
-    oneTimeCode: number;
-    expireAt: Date;
-  };
+  role: USER_ROLES;
+  status: STATUS;
+  phoneNumber?: string;
+  phoneCountryCode?: string;
+  isDeleted: boolean;
   verified: boolean;
-  [key: string]: unknown;
-};
-
-export type UserModal = {
-  isExistUserById(id: string): any;
-  isExistUserByEmail(email: string): any;
-  isAccountCreated(id: string): any;
-  isMatchPassword(password: string, hashPassword: string): boolean;
-} & Model<IUser>;
-
-/*
+  isSubscribed: boolean;
+  subscription?: ISubscription;
   authentication?: {
     isResetPassword: boolean;
-    oneTimeCode: number;
-    expireAt: Date;
+    oneTimeCode?: number;
+    expireAt?: Date;
   };
-  */
+  createdAt: Date;
+  updatedAt: Date;
+  subscriptionStatus?: string; 
+}
+
+export interface UserModal extends Model<IUser> {
+  isExistUserById(id: string): Promise<IUser | null>;
+  isExistUserByEmail(email: string): Promise<IUser | null>;
+  isAccountCreated(id: string): Promise<IUser | null>;
+  isMatchPassword(password: string, hashPassword: string): Promise<boolean>;
+}
