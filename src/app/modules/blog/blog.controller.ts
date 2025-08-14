@@ -4,7 +4,7 @@ import sendResponse from '../../../shared/sendResponse';
 import { BlogServices } from './blog.services';
 
 const createBlog = catchAsync(async (req, res) => {
-  const userId = req.user.id;
+  const userId = req.user?.id || req.user?.userId;
 
   let image;
   if (req.files && 'image' in req.files && req.files.image[0]) {
@@ -51,7 +51,7 @@ const getBlogById = catchAsync(async (req, res) => {
 
 const updateBlogById = catchAsync(async (req, res) => {
   const { id } = req.params;
-  const userId = req.user.id;
+  const userId = req.user?.id || req.user?.userId;
 
   let image;
   if (req.files && 'image' in req.files && req.files.image[0]) {
@@ -75,7 +75,7 @@ const updateBlogById = catchAsync(async (req, res) => {
 
 const deleteBlogById = catchAsync(async (req, res) => {
   const { id } = req.params;
-  const userId = req.user.id;
+  const userId = req.user?.id || req.user?.userId;
   await BlogServices.deleteBlogById(id, userId);
 
   sendResponse(res, {

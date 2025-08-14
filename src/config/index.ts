@@ -5,16 +5,16 @@ dotenv.config({ path: path.join(process.cwd(), '.env') });
 
 export default {
   ip_address: process.env.IP_ADDRESS,
-  database_url: process.env.DATABASE_URL,
+  database_url: process.env.DATABASE_URL || 'mongodb://localhost:27017/backend-template',
   node_env: process.env.NODE_ENV,
-  port: process.env.PORT,
-  bcrypt_salt_rounds: process.env.BCRYPT_SALT_ROUNDS,
+  port: process.env.PORT || 5000,
+  bcrypt_salt_rounds: process.env.BCRYPT_SALT_ROUNDS || 12,
   google_maps: process.env.GOOGLE_MAPS_API_KEY,
   jwt: {
-    jwt_secret: process.env.JWT_SECRET,
-    jwt_expire_in: process.env.JWT_EXPIRE_IN,
-    jwtRefreshSecret: process.env.JWT_REFRESH_SECRET,
-    jwtRefreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN,
+    jwt_secret: process.env.JWT_SECRET || 'your-jwt-secret-key',
+    jwt_expire_in: process.env.JWT_EXPIRE_IN || '7d',
+    jwtRefreshSecret: process.env.JWT_REFRESH_SECRET || 'your-refresh-secret-key',
+    jwtRefreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN || '30d',
   },
 
   stripe: {
@@ -24,15 +24,15 @@ export default {
   },
 
   email: {
-    from: process.env.EMAIL_FROM,
-    user: process.env.EMAIL_USER,
-    port: process.env.EMAIL_PORT,
-    host: process.env.EMAIL_HOST,
-    pass: process.env.EMAIL_PASS,
+    from: process.env.EMAIL_FROM || 'noreply@example.com',
+    user: process.env.EMAIL_USER || '',
+    port: process.env.EMAIL_PORT || 587,
+    host: process.env.EMAIL_HOST || 'smtp.gmail.com',
+    pass: process.env.EMAIL_PASS || '',
   },
   admin: {
-    name: process.env.ADMIN_NAME,
-    email: process.env.ADMIN_EMAIL,
-    password: process.env.ADMIN_PASSWORD,
+    name: process.env.ADMIN_NAME || 'Admin',
+    email: process.env.ADMIN_EMAIL || 'admin@example.com',
+    password: process.env.ADMIN_PASSWORD || 'admin123456',
   },
 };

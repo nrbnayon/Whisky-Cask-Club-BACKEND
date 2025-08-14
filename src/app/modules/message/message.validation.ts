@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const createMessage = z.object({
-  data: z.object({
+  body: z.object({
     senderId: z
       .string()
       .min(24, "Sender ID is required")
@@ -11,7 +11,6 @@ const createMessage = z.object({
       .min(24, "Receiver ID is required")
       .regex(/^[0-9a-fA-F]{24}$/, "Receiver ID must be a valid ObjectId"),
     message: z.string().optional(),
-    
   }),
 });
 

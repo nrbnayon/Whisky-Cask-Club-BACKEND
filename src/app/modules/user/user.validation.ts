@@ -21,9 +21,7 @@ const updateUserProfileSchema = z.object({
 });
 
 const updateProfileImageSchema = z.object({
-  body: z.object({
-    // Image will be handled by multer middleware
-  }),
+  body: z.object({}).optional(),
 });
 
 const adminUpdateUserSchema = z.object({

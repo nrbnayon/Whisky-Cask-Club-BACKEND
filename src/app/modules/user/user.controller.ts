@@ -27,7 +27,7 @@ const getAllUser = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getMe = catchAsync(async (req: Request, res: Response) => {
-  const result = await UserService.getMe(req.user.id);
+  const result = await UserService.getMe(req.user?.id || req.user?.userId);
 
   sendResponse(res, {
     statusCode: StatusCodes.OK,
@@ -63,7 +63,7 @@ const updateProfileImage = catchAsync(async (req: Request, res: Response) => {
     });
   }
 
-  const result = await UserService.updateProfileImage(req.user.id, imagePath);
+  const result = await UserService.updateProfileImage(req.user?.id || req.user?.userId, imagePath);
 
   sendResponse(res, {
     success: true,
@@ -88,7 +88,7 @@ const searchByPhone = catchAsync(async (req: Request, res: Response) => {
   const { searchTerm } = req.query;
   const result = await UserService.searchUserByPhone(
     searchTerm as string,
-    req.user.id,
+    req.user?.id || req.user?.userId,
   );
 
   sendResponse(res, {
@@ -100,10 +100,10 @@ const searchByPhone = catchAsync(async (req: Request, res: Response) => {
 });
 
 const deleteAccount = catchAsync(async (req: Request, res: Response) => {
-  const userIdToDelete = req.params.id || req.user.id;
+  const userIdToDelete = req.params.id || req.user?.id || req.user?.userId;
   const result = await UserService.deleteUserAccount(
     userIdToDelete,
-    req.user.id,
+    req.user?.id || req.user?.userId,
   );
 
   sendResponse(res, {
@@ -115,7 +115,7 @@ const deleteAccount = catchAsync(async (req: Request, res: Response) => {
 
 const adminUpdateUser = catchAsync(async (req: Request, res: Response) => {
   const result = await UserService.adminUpdateUser(
-    req.user.id,
+    req.user?.id || req.user?.userId,
     req.params.id,
     req.body,
   );
@@ -131,7 +131,7 @@ const adminUpdateUser = catchAsync(async (req: Request, res: Response) => {
 const changeUserStatus = catchAsync(async (req: Request, res: Response) => {
   const { status } = req.body;
   const result = await UserService.changeUserStatus(
-    req.user.id,
+    req.user?.id || req.user?.userId,
     req.params.id,
     status,
   );

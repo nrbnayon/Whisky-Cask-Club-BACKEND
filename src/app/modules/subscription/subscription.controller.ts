@@ -16,7 +16,7 @@ class SubscriptionControllerClass {
    * Create subscription
    */
   createSubscription = catchAsync(async (req: Request, res: Response) => {
-    const userId = req.user?.userId;
+    const userId = req.user?.id || req.user?.userId;
     const userEmail = req.user?.email;
     const subscriptionData: CreateSubscriptionRequest = req.body;
 
@@ -42,7 +42,7 @@ class SubscriptionControllerClass {
    * Cancel subscription
    */
   cancelSubscription = catchAsync(async (req: Request, res: Response) => {
-    const userId = req.user?.userId;
+    const userId = req.user?.id || req.user?.userId;
 
     if (!userId) {
       throw new AppError(StatusCodes.UNAUTHORIZED, 'User not authenticated');
@@ -62,7 +62,7 @@ class SubscriptionControllerClass {
    * Reactivate subscription
    */
   reactivateSubscription = catchAsync(async (req: Request, res: Response) => {
-    const userId = req.user?.userId;
+    const userId = req.user?.id || req.user?.userId;
 
     if (!userId) {
       throw new AppError(StatusCodes.UNAUTHORIZED, 'User not authenticated');
@@ -82,7 +82,7 @@ class SubscriptionControllerClass {
    * Get subscription status
    */
   getSubscriptionStatus = catchAsync(async (req: Request, res: Response) => {
-    const userId = req.user?.userId;
+    const userId = req.user?.id || req.user?.userId;
 
     if (!userId) {
       throw new AppError(StatusCodes.UNAUTHORIZED, 'User not authenticated');
@@ -102,7 +102,7 @@ class SubscriptionControllerClass {
    * Sync subscription status
    */
   syncSubscriptionStatus = catchAsync(async (req: Request, res: Response) => {
-    const userId = req.user?.userId;
+    const userId = req.user?.id || req.user?.userId;
 
     if (!userId) {
       throw new AppError(StatusCodes.UNAUTHORIZED, 'User not authenticated');
@@ -122,7 +122,7 @@ class SubscriptionControllerClass {
    * Change subscription plan
    */
   changeSubscriptionPlan = catchAsync(async (req: Request, res: Response) => {
-    const userId = req.user?.userId;
+    const userId = req.user?.id || req.user?.userId;
     const { plan } = req.body;
 
     if (!userId) {

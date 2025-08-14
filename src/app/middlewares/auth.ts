@@ -37,7 +37,7 @@ const auth = (...roles: string[]) => {
       if (roles.length && !roles.includes(decodedUser.role)) {
         throw new AppError(
           StatusCodes.FORBIDDEN,
-          "You don't have permission to access this API",
+          `Access denied. Required roles: ${roles.join(', ')}. Your role: ${decodedUser.role}`,
         );
       }
 

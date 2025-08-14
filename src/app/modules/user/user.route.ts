@@ -17,11 +17,11 @@ router.post(
 );
 
 // User routes (authenticated)
-router.get('/me', auth(), UserController.getMe);
+router.get('/me', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), UserController.getMe);
 
 router.patch(
   '/profile-update',
-  auth(),
+  auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
   fileUploadHandler(),
   validateRequest(UserValidation.updateUserProfileSchema),
   UserController.updateProfile,
@@ -29,15 +29,15 @@ router.patch(
 
 router.patch(
   '/profile-image',
-  auth(),
+  auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
   fileUploadHandler(),
   validateRequest(UserValidation.updateProfileImageSchema),
   UserController.updateProfileImage,
 );
 
-router.delete('/account', auth(), UserController.deleteAccount);
+router.delete('/account', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), UserController.deleteAccount);
 
-router.get('/search', auth(), UserController.searchByPhone);
+router.get('/search', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), UserController.searchByPhone);
 
 // Admin routes
 router.get(
