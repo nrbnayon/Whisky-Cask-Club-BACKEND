@@ -1,6 +1,9 @@
 import { Server } from 'socket.io';
 import { handleSendMessage } from './userMessage/message';
 import { Message } from '../app/modules/message/message.model';
+import { onlineStatusService } from '../app/modules/onlineStatus/onlineStatus.service';
+import { activityLogService } from '../app/modules/activityLog/activityLog.service';
+import { logger } from '../shared/logger';
 
 export const users = new Map<string, string[]>(); // Map to store userId -> [socketIds]
 export const activeChatUsers = new Map<string, string>(); // Map to track active chat sessions
@@ -19,10 +22,19 @@ const setupSocket = (server: any) => {
     console.log('New user connected:', socket.id);
 
     // User registration - associate socket with userId
-    socket.on('register', userId => {
+    socket.on('register', async userId => {
       const existingSockets = users.get(userId) || [];
       users.set(userId, [...existingSockets, socket.id]);
       console.log('Online users:', Array.from(users.keys()));
+
+      // Set user online
+      await onlineStatusService.setUserOnline(userId);
+      
+      // Log activity
+      await activityLogService.logActivity(userId, 'LOGIN', 'AUTH', {
+        socketId: socket.id,
+        timestamp: new Date(),
+      });
 
       // Broadcast updated online users list
       io.emit('onlineUsers', Array.from(users.keys()));
@@ -114,8 +126,10 @@ const setupSocket = (server: any) => {
     });
 
     // Handle user disconnect
-    socket.on('disconnect', () => {
+    socket.on('disconnect', async () => {
       console.log('User disconnected:', socket.id);
+
+      let disconnectedUserId: string | null = null;
 
       // Remove socket from users map
       users.forEach((socketIds, userId) => {
@@ -126,13 +140,32 @@ const setupSocket = (server: any) => {
           users.set(userId, updatedSockets);
         } else {
           // No more sockets for this user, remove from maps
+          disconnectedUserId = userId;
           users.delete(userId);
           activeChatUsers.delete(userId);
         }
       });
 
+      // Set user offline if no more sockets
+      if (disconnectedUserId) {
+        await onlineStatusService.setUserOffline(disconnectedUserId);
+        
+        // Log activity
+        await activityLogService.logActivity(disconnectedUserId, 'LOGOUT', 'AUTH', {
+          socketId: socket.id,
+          timestamp: new Date(),
+        });
+      }
+
       // Broadcast updated online users list
       io.emit('onlineUsers', Array.from(users.keys()));
+    });
+
+    // Handle heartbeat for keeping users online
+    socket.on('heartbeat', async (userId) => {
+      if (userId) {
+        await onlineStatusService.updateUserActivity(userId);
+      }
     });
   });
 

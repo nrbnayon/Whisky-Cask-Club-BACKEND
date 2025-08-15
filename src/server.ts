@@ -7,6 +7,8 @@ import app from './app';
 import config from './config';
 import { errorLogger, logger } from './shared/logger';
 import seedAdmin from './DB';
+import { startAllCleanupJobs } from './jobs/cleanupJobs';
+import { redisClient } from './config/redis.config';
 
 //uncaught exception
 process.on('uncaughtException', error => {
@@ -37,6 +39,17 @@ async function main() {
     });
 
     await seedAdmin();
+    
+    // Start cleanup jobs
+    startAllCleanupJobs();
+    
+    // Test Redis connection
+    const redisConnected = await redisClient.ping();
+    if (redisConnected) {
+      logger.info('Redis connection verified');
+    } else {
+      logger.warn('Redis connection failed - some features may not work');
+    }
   } catch (error) {
     errorLogger.error(colors.red('🤢 Failed to connect Database'));
   }

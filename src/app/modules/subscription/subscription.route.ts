@@ -3,6 +3,7 @@ import { Router } from 'express';
 import { SubscriptionController } from './subscription.controller';
 import { SubscriptionValidation } from './subscription.validation';
 import auth from 'app/middlewares/auth';
+import { USER_ROLES } from '../../../enums/user';
 import validateRequest from 'app/middlewares/validateRequest';
 import { checkSubscriptionExpiry } from 'app/middlewares/checkSubscriptionExpiry';
 

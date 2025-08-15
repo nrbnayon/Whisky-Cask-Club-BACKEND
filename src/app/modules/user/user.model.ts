@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import { StatusCodes } from 'http-status-codes';
 import { model, Schema } from 'mongoose';
 import config from '../../../config';
@@ -140,6 +140,48 @@ const userSchema = new Schema<IUser, UserModal>(
       type: Boolean,
       default: false,
     },
+    isOnline: {
+      type: Boolean,
+      default: false,
+      index: true,
+    },
+    lastSeen: {
+      type: Date,
+      default: Date.now,
+    },
+    deviceTokens: [{
+      token: String,
+      platform: {
+        type: String,
+        enum: ['ios', 'android', 'web'],
+        default: 'web'
+      },
+      createdAt: {
+        type: Date,
+        default: Date.now
+      }
+    }],
+    isOnline: {
+      type: Boolean,
+      default: false,
+      index: true,
+    },
+    lastSeen: {
+      type: Date,
+      default: Date.now,
+    },
+    deviceTokens: [{
+      token: String,
+      platform: {
+        type: String,
+        enum: ['ios', 'android', 'web'],
+        default: 'web'
+      },
+      createdAt: {
+        type: Date,
+        default: Date.now
+      }
+    }],
     isSubscribed: {
       type: Boolean,
       default: false,

@@ -1,7 +1,7 @@
-# Backend Template API Documentation
+# Whisky Cask Club Backend API Documentation
 
 ## Overview
-This is a comprehensive backend API built with Node.js, Express.js, MongoDB, and TypeScript. It provides authentication, user management, subscription handling, blog management, messaging, and various utility endpoints.
+This is a comprehensive backend API built with Node.js, Express.js, MongoDB, Redis, and Socket.IO. It provides authentication, user management, real-time messaging, notifications, activity tracking, subscription handling, and various utility endpoints.
 
 ## Base URL
 ```
@@ -134,7 +134,9 @@ Authenticate user and get access tokens.
       "email": "john@example.com",
       "role": "USER",
       "verified": true,
-      "isSubscribed": false
+      "isSubscribed": false,
+      "isOnline": true,
+      "lastSeen": "2024-01-01T00:00:00.000Z"
     },
     "accessToken": "jwt_access_token",
     "refreshToken": "jwt_refresh_token"
@@ -298,6 +300,15 @@ Authorization: Bearer <access_token>
     "phoneCountryCode": "+1",
     "verified": true,
     "isSubscribed": false,
+    "isOnline": true,
+    "lastSeen": "2024-01-01T00:00:00.000Z",
+    "deviceTokens": [
+      {
+        "token": "device_token",
+        "platform": "web",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      }
+    ],
     "createdAt": "2024-01-01T00:00:00.000Z",
     "updatedAt": "2024-01-01T00:00:00.000Z"
   }
@@ -461,6 +472,8 @@ Authorization: Bearer <admin_access_token>
         "status": "ACTIVE",
         "verified": true,
         "isSubscribed": false,
+        "isOnline": false,
+        "lastSeen": "2024-01-01T00:00:00.000Z",
         "createdAt": "2024-01-01T00:00:00.000Z"
       }
     ],
@@ -474,41 +487,206 @@ Authorization: Bearer <admin_access_token>
 
 ---
 
-## 2. Get Single User (Admin)
-**GET** `/user/:id`
+# Real-time Features
 
-Get specific user details.
+## 1. Online Status Management
+
+### Get Online Users
+**GET** `/online-status/online-users`
+
+Get list of currently online users.
 
 ### Headers
 ```
-Authorization: Bearer <admin_access_token>
+Authorization: Bearer <access_token>
 ```
 
 ### Response
 ```json
 {
   "success": true,
-  "message": "User retrieved successfully",
+  "message": "Online users retrieved successfully",
   "data": {
-    "id": "user_id",
-    "fullName": "John Doe",
-    "email": "john@example.com",
-    "role": "USER",
-    "status": "ACTIVE",
-    "verified": true,
-    "isSubscribed": false,
-    "subscription": null,
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "users": [
+      {
+        "id": "user_id",
+        "fullName": "John Doe",
+        "email": "john@example.com",
+        "image": "/images/profile.jpg",
+        "isOnline": true,
+        "lastSeen": "2024-01-01T00:00:00.000Z"
+      }
+    ],
+    "count": 5
   }
+}
+```
+
+### Get Online Users Count
+**GET** `/online-status/online-count`
+
+Get count of online users.
+
+### Response
+```json
+{
+  "success": true,
+  "message": "Online users count retrieved successfully",
+  "data": {
+    "count": 25
+  }
+}
+```
+
+### Check User Online Status
+**GET** `/online-status/user/:userId/status`
+
+Check if specific user is online.
+
+### Response
+```json
+{
+  "success": true,
+  "message": "User online status retrieved successfully",
+  "data": {
+    "userId": "user_id",
+    "isOnline": true,
+    "lastSeen": "2024-01-01T00:00:00.000Z"
+  }
+}
+```
+
+### Update User Activity (Heartbeat)
+**POST** `/online-status/heartbeat`
+
+Update user's last activity timestamp.
+
+### Headers
+```
+Authorization: Bearer <access_token>
+```
+
+### Response
+```json
+{
+  "success": true,
+  "message": "User activity updated successfully"
 }
 ```
 
 ---
 
-## 3. Update User (Admin)
-**PATCH** `/user/:id`
+## 2. Notifications System
 
-Update any user's information (Admin only).
+### Get User Notifications
+**GET** `/notifications/my-notifications`
+
+Get user's notifications with pagination.
+
+### Headers
+```
+Authorization: Bearer <access_token>
+```
+
+### Query Parameters
+- `page` (number): Page number
+- `limit` (number): Items per page
+- `type` (string): Filter by type (INFO, SUCCESS, WARNING, ERROR, etc.)
+- `isRead` (boolean): Filter by read status
+- `priority` (string): Filter by priority (LOW, MEDIUM, HIGH, URGENT)
+
+### Response
+```json
+{
+  "success": true,
+  "message": "Notifications retrieved successfully",
+  "data": {
+    "notifications": [
+      {
+        "id": "notification_id",
+        "title": "Welcome!",
+        "message": "Welcome to our platform",
+        "type": "INFO",
+        "priority": "MEDIUM",
+        "isRead": false,
+        "data": {},
+        "actionUrl": "/dashboard",
+        "imageUrl": "/images/welcome.jpg",
+        "createdAt": "2024-01-01T00:00:00.000Z",
+        "sender": {
+          "fullName": "System",
+          "email": "system@app.com"
+        }
+      }
+    ],
+    "total": 50,
+    "unreadCount": 10,
+    "page": 1,
+    "limit": 20,
+    "totalPages": 3
+  }
+}
+```
+
+### Mark Notification as Read
+**PATCH** `/notifications/:id/read`
+
+Mark specific notification as read.
+
+### Response
+```json
+{
+  "success": true,
+  "message": "Notification marked as read",
+  "data": {
+    "id": "notification_id",
+    "isRead": true,
+    "readAt": "2024-01-01T00:00:00.000Z"
+  }
+}
+```
+
+### Mark All Notifications as Read
+**PATCH** `/notifications/mark-all-read`
+
+Mark all user notifications as read.
+
+### Response
+```json
+{
+  "success": true,
+  "message": "5 notifications marked as read",
+  "data": {
+    "count": 5
+  }
+}
+```
+
+### Register Device Token
+**POST** `/notifications/device-token/register`
+
+Register device token for push notifications.
+
+### Request Body
+```json
+{
+  "token": "firebase_device_token",
+  "platform": "web"
+}
+```
+
+### Response
+```json
+{
+  "success": true,
+  "message": "Device token registered successfully"
+}
+```
+
+### Send Bulk Notifications (Admin)
+**POST** `/notifications/bulk-send`
+
+Send notifications to multiple users.
 
 ### Headers
 ```
@@ -518,11 +696,15 @@ Authorization: Bearer <admin_access_token>
 ### Request Body
 ```json
 {
-  "fullName": "Updated Name",
-  "role": "USER",
-  "status": "ACTIVE",
-  "verified": true,
-  "isSubscribed": false
+  "userIds": ["user1", "user2", "user3"],
+  "title": "System Maintenance",
+  "message": "System will be down for maintenance",
+  "type": "WARNING",
+  "priority": "HIGH",
+  "sendPush": true,
+  "data": {
+    "maintenanceTime": "2024-01-01T02:00:00.000Z"
+  }
 }
 ```
 
@@ -530,53 +712,80 @@ Authorization: Bearer <admin_access_token>
 ```json
 {
   "success": true,
-  "message": "User updated successfully",
-  "data": {
-    "id": "user_id",
-    "fullName": "Updated Name",
-    "role": "USER",
-    "status": "ACTIVE"
-  }
+  "message": "Bulk notifications sent successfully"
 }
 ```
 
 ---
 
-## 4. Change User Status (Admin)
-**PATCH** `/user/:id/status`
+## 3. Activity Tracking
 
-Change user's status.
+### Get User Activities
+**GET** `/activity-logs/my-activities`
+
+Get current user's activity history.
+
+### Headers
+```
+Authorization: Bearer <access_token>
+```
+
+### Query Parameters
+- `page` (number): Page number
+- `limit` (number): Items per page
+- `action` (string): Filter by action type
+- `resource` (string): Filter by resource type
+- `startDate` (string): Start date filter (ISO format)
+- `endDate` (string): End date filter (ISO format)
+
+### Response
+```json
+{
+  "success": true,
+  "message": "User activities retrieved successfully",
+  "data": {
+    "activities": [
+      {
+        "id": "activity_id",
+        "action": "LOGIN",
+        "resource": "AUTH",
+        "details": {
+          "ipAddress": "192.168.1.1",
+          "userAgent": "Mozilla/5.0..."
+        },
+        "timestamp": "2024-01-01T00:00:00.000Z",
+        "user": {
+          "fullName": "John Doe",
+          "email": "john@example.com"
+        }
+      }
+    ],
+    "total": 100,
+    "page": 1,
+    "limit": 20,
+    "totalPages": 5
+  }
+}
+```
+
+### Get All Activities (Admin)
+**GET** `/activity-logs/all`
+
+Get all user activities (Admin only).
 
 ### Headers
 ```
 Authorization: Bearer <admin_access_token>
 ```
 
-### Request Body
-```json
-{
-  "status": "INACTIVE"
-}
-```
+### Query Parameters
+Same as user activities plus:
+- `user` (string): Filter by specific user ID
 
-### Response
-```json
-{
-  "success": true,
-  "message": "User status updated successfully",
-  "data": {
-    "id": "user_id",
-    "status": "INACTIVE"
-  }
-}
-```
+### Get Activity Statistics
+**GET** `/activity-logs/stats`
 
----
-
-## 5. Delete User (Admin)
-**DELETE** `/user/:id`
-
-Delete any user account (Admin only).
+Get activity statistics and analytics.
 
 ### Headers
 ```
@@ -587,7 +796,122 @@ Authorization: Bearer <admin_access_token>
 ```json
 {
   "success": true,
-  "message": "User deleted successfully"
+  "message": "Activity statistics retrieved successfully",
+  "data": {
+    "resourceStats": [
+      {
+        "_id": "AUTH",
+        "actions": [
+          {
+            "action": "LOGIN",
+            "count": 150,
+            "lastActivity": "2024-01-01T00:00:00.000Z"
+          }
+        ],
+        "totalCount": 200
+      }
+    ],
+    "dailyStats": [
+      {
+        "_id": "2024-01-01",
+        "count": 25
+      }
+    ]
+  }
+}
+```
+
+---
+
+# Messaging System
+
+## 1. Get Messages
+**GET** `/messages/messages?senderId=user1&receiverId=user2`
+
+Get messages between two users.
+
+### Headers
+```
+Authorization: Bearer <access_token>
+```
+
+### Query Parameters
+- `senderId` (string, required): Sender user ID
+- `receiverId` (string, required): Receiver user ID
+- `page` (number): Page number
+- `limit` (number): Messages per page
+- `searchTerm` (string): Search in messages
+
+### Response
+```json
+{
+  "success": true,
+  "message": "Messages retrieved successfully",
+  "meta": {
+    "page": 1,
+    "limit": 20,
+    "total": 100,
+    "totalPage": 5
+  },
+  "data": [
+    {
+      "id": "message_id",
+      "sender": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "image": "/images/profile.jpg"
+      },
+      "receiver": {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "image": "/images/profile2.jpg"
+      },
+      "message": "Hello there!",
+      "image": null,
+      "isRead": true,
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}
+```
+
+---
+
+## 2. Send Message with Image
+**POST** `/messages/message-with-image`
+
+Send a message with optional image attachment.
+
+### Headers
+```
+Authorization: Bearer <access_token>
+Content-Type: multipart/form-data
+```
+
+### Request Body (Form Data)
+```
+data: {
+  "senderId": "sender_user_id",
+  "receiverId": "receiver_user_id",
+  "message": "Hello with image!"
+}
+image: <image_file> (optional)
+```
+
+### Response
+```json
+{
+  "success": true,
+  "message": "Message created successfully",
+  "data": {
+    "id": "message_id",
+    "sender": "sender_user_id",
+    "receiver": "receiver_user_id",
+    "message": "Hello with image!",
+    "image": "/images/message-image.jpg",
+    "isRead": false,
+    "createAt": "2024-01-01T00:00:00.000Z"
+  }
 }
 ```
 
@@ -670,90 +994,6 @@ Get all blog posts with pagination.
       }
     ]
   }
-}
-```
-
----
-
-## 3. Get Single Blog Post
-**GET** `/blog/blog-details/:id`
-
-Get specific blog post details.
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Blog retrieved successfully",
-  "data": {
-    "id": "blog_id",
-    "title": "Blog Post Title",
-    "description": "Full blog post content here...",
-    "image": "/images/blog-image.jpg",
-    "author": {
-      "fullName": "Admin User",
-      "email": "admin@example.com"
-    },
-    "date": "2024-01-01T00:00:00.000Z",
-    "createdAt": "2024-01-01T00:00:00.000Z"
-  }
-}
-```
-
----
-
-## 4. Update Blog Post (Admin)
-**PATCH** `/blog/update-blog/:id`
-
-Update existing blog post.
-
-### Headers
-```
-Authorization: Bearer <admin_access_token>
-Content-Type: multipart/form-data
-```
-
-### Request Body (Form Data)
-```
-data: {
-  "title": "Updated Blog Title",
-  "description": "Updated blog content..."
-}
-image: <new_image_file> (optional)
-```
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Blog updated successfully",
-  "data": {
-    "id": "blog_id",
-    "title": "Updated Blog Title",
-    "description": "Updated blog content...",
-    "image": "/images/updated-blog-image.jpg"
-  }
-}
-```
-
----
-
-## 5. Delete Blog Post (Admin)
-**DELETE** `/blog/delete-blog/:id`
-
-Delete blog post.
-
-### Headers
-```
-Authorization: Bearer <admin_access_token>
-```
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Blog deleted successfully",
-  "data": null
 }
 ```
 
@@ -874,259 +1114,11 @@ Authorization: Bearer <access_token>
 
 ---
 
-## 4. Cancel Subscription
-**POST** `/subscriptions/cancel`
+# Content Management
 
-Cancel current subscription.
+## 1. Newsletter Management
 
-### Headers
-```
-Authorization: Bearer <access_token>
-```
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Subscription cancelled successfully",
-  "data": {
-    "message": "Subscription will be cancelled at the end of the current period",
-    "cancelAtPeriodEnd": "2024-02-01T00:00:00.000Z",
-    "status": "active"
-  }
-}
-```
-
----
-
-## 5. Reactivate Subscription
-**POST** `/subscriptions/reactivate`
-
-Reactivate cancelled subscription.
-
-### Headers
-```
-Authorization: Bearer <access_token>
-```
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Subscription reactivated successfully",
-  "data": {
-    "message": "Subscription has been reactivated",
-    "status": "active"
-  }
-}
-```
-
----
-
-## 6. Change Subscription Plan
-**PATCH** `/subscriptions/change-plan`
-
-Change subscription plan.
-
-### Headers
-```
-Authorization: Bearer <access_token>
-```
-
-### Request Body
-```json
-{
-  "plan": "premium"
-}
-```
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Subscription plan changed successfully",
-  "data": {
-    "subscriptionId": "sub_stripe_id",
-    "status": "active",
-    "currentPeriodEnd": "2024-02-01T00:00:00.000Z",
-    "plan": "premium",
-    "price": 19.99
-  }
-}
-```
-
----
-
-## 7. Sync Subscription Status
-**POST** `/subscriptions/sync`
-
-Sync subscription status with Stripe.
-
-### Headers
-```
-Authorization: Bearer <access_token>
-```
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Subscription status synchronized successfully",
-  "data": {
-    "id": "user_id",
-    "isSubscribed": true,
-    "subscription": {
-      "status": "active",
-      "plan": "basic"
-    }
-  }
-}
-```
-
----
-
-## 8. Get Subscription Metrics (Admin)
-**GET** `/subscriptions/metrics`
-
-Get subscription analytics and metrics.
-
-### Headers
-```
-Authorization: Bearer <admin_access_token>
-```
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Subscription metrics retrieved successfully",
-  "data": {
-    "activeSubscriptions": 150,
-    "inactiveUsers": 50,
-    "totalUsers": 200,
-    "planDistribution": [
-      {
-        "_id": "basic",
-        "count": 100
-      },
-      {
-        "_id": "premium",
-        "count": 50
-      }
-    ],
-    "statusDistribution": [
-      {
-        "_id": "active",
-        "count": 140
-      },
-      {
-        "_id": "cancelled",
-        "count": 10
-      }
-    ]
-  }
-}
-```
-
----
-
-# Messaging System
-
-## 1. Get Messages
-**GET** `/messages/messages?senderId=user1&receiverId=user2`
-
-Get messages between two users.
-
-### Headers
-```
-Authorization: Bearer <access_token>
-```
-
-### Query Parameters
-- `senderId` (string, required): Sender user ID
-- `receiverId` (string, required): Receiver user ID
-- `page` (number): Page number
-- `limit` (number): Messages per page
-- `searchTerm` (string): Search in messages
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Messages retrieved successfully",
-  "meta": {
-    "page": 1,
-    "limit": 20,
-    "total": 100,
-    "totalPage": 5
-  },
-  "data": [
-    {
-      "id": "message_id",
-      "sender": {
-        "firstName": "John",
-        "lastName": "Doe",
-        "image": "/images/profile.jpg"
-      },
-      "receiver": {
-        "firstName": "Jane",
-        "lastName": "Smith",
-        "image": "/images/profile2.jpg"
-      },
-      "message": "Hello there!",
-      "image": null,
-      "isRead": true,
-      "createdAt": "2024-01-01T00:00:00.000Z"
-    }
-  ]
-}
-```
-
----
-
-## 2. Send Message with Image
-**POST** `/messages/message-with-image`
-
-Send a message with optional image attachment.
-
-### Headers
-```
-Authorization: Bearer <access_token>
-Content-Type: multipart/form-data
-```
-
-### Request Body (Form Data)
-```
-data: {
-  "senderId": "sender_user_id",
-  "receiverId": "receiver_user_id",
-  "message": "Hello with image!"
-}
-image: <image_file> (optional)
-```
-
-### Response
-```json
-{
-  "success": true,
-  "message": "Message created successfully",
-  "data": {
-    "id": "message_id",
-    "sender": "sender_user_id",
-    "receiver": "receiver_user_id",
-    "message": "Hello with image!",
-    "image": "/images/message-image.jpg",
-    "isRead": false,
-    "createAt": "2024-01-01T00:00:00.000Z"
-  }
-}
-```
-
----
-
-# Newsletter Management
-
-## 1. Subscribe to Newsletter
+### Subscribe to Newsletter
 **POST** `/news-letter/subscribe-newsletter`
 
 Subscribe to newsletter.
@@ -1155,143 +1147,68 @@ Subscribe to newsletter.
 
 ---
 
-## 2. Get All Newsletter Subscribers (Admin)
-**GET** `/news-letter/all-newsletters`
+# WebSocket Events (Real-time)
 
-Get all newsletter subscribers.
+## Connection
+Connect to WebSocket server at: `ws://localhost:5000`
 
-### Headers
-```
-Authorization: Bearer <admin_access_token>
-```
+## Events
 
-### Query Parameters
-- `page` (number): Page number (default: 1)
-- `limit` (number): Items per page (default: 10)
+### Client to Server
+- `register`: Register user for real-time updates
+  ```javascript
+  socket.emit('register', userId);
+  ```
 
-### Response
-```json
-{
-  "success": true,
-  "message": "All newsletters retrieved successfully",
-  "data": {
-    "result": [
-      {
-        "id": "newsletter_id",
-        "email": "john@example.com",
-        "name": "John Doe",
-        "createdAt": "2024-01-01T00:00:00.000Z"
-      }
-    ],
-    "totalData": 100,
-    "page": 1,
-    "limit": 10
-  }
-}
-```
+- `sendMessage`: Send a message
+  ```javascript
+  socket.emit('sendMessage', {
+    senderId: 'user1',
+    receiverId: 'user2',
+    message: 'Hello!',
+    image: 'optional_image_url'
+  });
+  ```
 
----
+- `activeChat`: Set active chat session
+  ```javascript
+  socket.emit('activeChat', {
+    senderId: 'user1',
+    receiverId: 'user2'
+  });
+  ```
 
-# Content Management
+- `markAsRead`: Mark messages as read
+  ```javascript
+  socket.emit('markAsRead', {
+    senderId: 'user1',
+    receiverId: 'user2'
+  });
+  ```
 
-## 1. About Us Management
+- `typing`: Indicate user is typing
+  ```javascript
+  socket.emit('typing', {
+    senderId: 'user1',
+    receiverId: 'user2'
+  });
+  ```
 
-### Create About Us (Admin)
-**POST** `/about/create-about`
+- `heartbeat`: Keep user online
+  ```javascript
+  socket.emit('heartbeat', userId);
+  ```
 
-### Headers
-```
-Authorization: Bearer <admin_access_token>
-```
-
-### Request Body
-```json
-{
-  "description": "About us content here..."
-}
-```
-
-### Get About Us
-**GET** `/about/`
-
-### Update About Us (Admin)
-**POST** `/about/update-about`
-
-### Headers
-```
-Authorization: Bearer <admin_access_token>
-```
-
-### Request Body
-```json
-{
-  "description": "Updated about us content..."
-}
-```
-
----
-
-## 2. Privacy Policy Management
-
-### Create Privacy Policy (Admin)
-**POST** `/privacy/create-privacy`
-
-### Get Privacy Policy
-**GET** `/privacy/`
-
-### Update Privacy Policy (Admin)
-**POST** `/privacy/update-privacy`
-
----
-
-## 3. Terms and Conditions Management
-
-### Create Terms (Admin)
-**POST** `/terms/create-terms-condition`
-
-### Get Terms
-**GET** `/terms/`
-
-### Update Terms (Admin)
-**POST** `/terms/update-terms-condition`
-
----
-
-## 4. Settings Management
-
-### Create Settings (Admin)
-**POST** `/setting/create-setting`
-
-### Get Settings
-**GET** `/setting/`
-
-### Update Settings (Admin)
-**POST** `/setting/update-setting`
-
----
-
-# Webhook Endpoints
-
-## 1. Stripe Webhook
-**POST** `/my-webhook/stripe`
-
-Handle Stripe webhook events for subscription management.
-
-### Headers
-```
-stripe-signature: <stripe_signature>
-Content-Type: application/json
-```
-
-### Request Body
-Raw Stripe webhook payload
-
-### Response
-```json
-{
-  "received": true
-}
-```
+### Server to Client
+- `receiver-{userId}`: Receive new message
+- `message-sent`: Message delivery confirmation
+- `messages-read`: Messages marked as read
+- `userTyping`: User typing indicator
+- `userStoppedTyping`: Stop typing indicator
+- `onlineUsers`: List of online users
+- `user:online`: User came online
+- `user:offline`: User went offline
+- `notification:{userId}`: New notification
 
 ---
 
@@ -1307,124 +1224,43 @@ Raw Stripe webhook payload
 | 404 | Not Found |
 | 409 | Conflict |
 | 422 | Validation Error |
+| 429 | Too Many Requests |
 | 500 | Internal Server Error |
 
 ---
 
 # Rate Limiting
 
-The API implements rate limiting to prevent abuse. Current limits:
-- 100 requests per minute per IP address
-- 1000 requests per hour per authenticated user
+The API implements rate limiting to prevent abuse:
+- **General API**: 100 requests per minute per IP
+- **Authentication**: 50 requests per minute per IP
+- **File Upload**: 20 requests per minute per IP
 
 ---
 
 # File Upload Guidelines
 
 ## Supported File Types
-- **Images**: JPG, JPEG, PNG, GIF
+- **Images**: JPG, JPEG, PNG, WEBP, GIF
 - **Documents**: PDF
 - **Media**: MP4 (video), MP3 (audio)
 
 ## File Size Limits
-- Images: 10MB maximum
-- Documents: 20MB maximum
-- Media files: 50MB maximum
-
-## Upload Endpoints
-All file uploads use `multipart/form-data` encoding and require authentication.
-
----
-
-# WebSocket Events (Real-time Messaging)
-
-## Connection
-Connect to WebSocket server at: `ws://localhost:5000`
-
-## Events
-
-### Client to Server
-- `register`: Register user for real-time updates
-- `sendMessage`: Send a message
-- `activeChat`: Set active chat session
-- `markAsRead`: Mark messages as read
-- `typing`: Indicate user is typing
-- `stopTyping`: Stop typing indicator
-
-### Server to Client
-- `receiver-{userId}`: Receive new message
-- `message-sent`: Message delivery confirmation
-- `messages-read`: Messages marked as read
-- `userTyping`: User typing indicator
-- `userStoppedTyping`: Stop typing indicator
-- `onlineUsers`: List of online users
-
----
-
-# Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-```env
-# Server Configuration
-NODE_ENV=development
-PORT=5000
-IP_ADDRESS=localhost
-
-# Database
-DATABASE_URL=mongodb://localhost:27017/backend-template
-
-# JWT Configuration
-JWT_SECRET=your-super-secret-jwt-key-here
-JWT_EXPIRE_IN=7d
-JWT_REFRESH_SECRET=your-super-secret-refresh-key-here
-JWT_REFRESH_EXPIRES_IN=30d
-
-# Bcrypt
-BCRYPT_SALT_ROUNDS=12
-
-# Email Configuration
-EMAIL_FROM=noreply@yourapp.com
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-
-# Admin Configuration
-ADMIN_NAME=Super Admin
-ADMIN_EMAIL=admin@yourapp.com
-ADMIN_PASSWORD=SecureAdminPassword123!
-
-# Stripe Configuration (Optional)
-STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key
-STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
-
-# Google Maps API (Optional)
-GOOGLE_MAPS_API_KEY=your_google_maps_api_key
-```
-
----
-
-# Getting Started
-
-1. **Clone the repository**
-2. **Install dependencies**: `npm install`
-3. **Set up environment variables**: Copy `.env.example` to `.env` and fill in your values
-4. **Start MongoDB**: Ensure MongoDB is running
-5. **Run the application**: `npm run dev`
-6. **Access the API**: `http://localhost:5000/api/v1`
+- **Images**: 5MB maximum
+- **Documents**: 10MB maximum
+- **Media files**: 50MB maximum
 
 ---
 
 # Postman Collection
 
-Import the following Postman collection to test all endpoints:
+You can import this Postman collection to test all endpoints:
 
 ```json
 {
   "info": {
-    "name": "Backend Template API",
-    "description": "Complete API collection for the backend template",
+    "name": "Whisky Cask Club API",
+    "description": "Complete API collection for Whisky Cask Club Backend",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -1436,8 +1272,32 @@ Import the following Postman collection to test all endpoints:
       "key": "accessToken",
       "value": ""
     }
-  ]
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{accessToken}}",
+        "type": "string"
+      }
+    ]
+  }
 }
+```
+
+---
+
+# Environment Variables for Testing
+
+```env
+# Development
+DEV_BASE_URL=http://localhost:5000/api/v1
+DEV_WS_URL=ws://localhost:5000
+
+# Production
+PROD_BASE_URL=https://your-domain.com/api/v1
+PROD_WS_URL=wss://your-domain.com
 ```
 
 ---
@@ -1445,7 +1305,7 @@ Import the following Postman collection to test all endpoints:
 # Support
 
 For support and questions:
-- Email: support@yourapp.com
+- Email: support@whiskycaskclub.com
 - Documentation: This file
 - Issues: Create an issue in the repository
 

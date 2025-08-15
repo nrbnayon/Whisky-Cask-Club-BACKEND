@@ -1,0 +1,280 @@
+15/08/2025 17:35:31 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+15/08/2025 17:35:31 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+15/08/2025 17:38:15 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+15/08/2025 17:38:15 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+15/08/2025 17:40:45 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+15/08/2025 17:40:45 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+15/08/2025 17:40:57 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)
+15/08/2025 17:40:57 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+Error: Cannot find module 'bcryptjs'
+Require stack:
+- /home/project/src/app/modules/auth/auth.service.ts
+- /home/project/src/app/modules/auth/auth.controller.ts
+- /home/project/src/app/modules/auth/auth.route.ts
+- /home/project/src/routes/index.ts
+- /home/project/src/app.ts
+- /home/project/src/server.ts
+    at Module._resolveFilename (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:14795)
+    at Module._load (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:12287)
+    at Module.require (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:15469)
+    at require3 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:166:2696)
+    at _0x52ec33 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868754)
+    at Object.eval (/home/project/src/app/modules/auth/auth.service.ts:4:1)
+    at Object._0x35ff06 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:868873)
+    at Module._compile (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:148:16006)
+    at Module._compile (/home/project/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-8063446160570774.js:69:33)

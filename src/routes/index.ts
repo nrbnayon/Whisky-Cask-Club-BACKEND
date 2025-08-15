@@ -9,6 +9,9 @@ import { NewsLetterRoutes } from '../app/modules/newsLetter/newsLetter.route';
 import { BlogRoutes } from '../app/modules/blog/blog.route';
 import { SubscriptionRoutes } from 'app/modules/subscription/subscription.route';
 import { MessageRoutes } from '../app/modules/message/message.route';
+import { ActivityLogRoutes } from '../app/modules/activityLog/activityLog.route';
+import { NotificationRoutes } from '../app/modules/notification/notification.route';
+import { OnlineStatusRoutes } from '../app/modules/onlineStatus/onlineStatus.route';
 
 const router = express.Router();
 
@@ -23,6 +26,9 @@ const apiRoutes = [
   { path: '/blog', route: BlogRoutes },
   { path: '/subscriptions', route: SubscriptionRoutes },
   { path: '/messages', route: MessageRoutes },
+  { path: '/activity-logs', route: ActivityLogRoutes },
+  { path: '/notifications', route: NotificationRoutes },
+  { path: '/online-status', route: OnlineStatusRoutes },
 ];
 
 apiRoutes.forEach(route => router.use(route.path, route.route));
