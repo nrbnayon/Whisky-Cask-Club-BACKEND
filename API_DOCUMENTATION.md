@@ -1,27 +1,34 @@
-# Whisky Cask Club Backend API Documentation
+# Reusable Backend Template using express js API Documentation
 
 ## Overview
+
 This is a comprehensive backend API built with Node.js, Express.js, MongoDB, Redis, and Socket.IO. It provides authentication, user management, real-time messaging, notifications, activity tracking, subscription handling, and various utility endpoints.
 
 ## Base URL
+
 ```
 http://localhost:5000/api/v1
 ```
 
 ## Authentication
+
 Most endpoints require authentication using Bearer tokens. Include the token in the Authorization header:
+
 ```
 Authorization: Bearer <your_jwt_token>
 ```
 
 ## Response Format
+
 All API responses follow this standard format:
+
 ```json
 {
   "success": true,
   "message": "Success message",
   "data": {}, // Response data
-  "meta": {   // Pagination info (when applicable)
+  "meta": {
+    // Pagination info (when applicable)
     "page": 1,
     "limit": 10,
     "total": 100,
@@ -31,6 +38,7 @@ All API responses follow this standard format:
 ```
 
 ## Error Response Format
+
 ```json
 {
   "success": false,
@@ -50,11 +58,13 @@ All API responses follow this standard format:
 # Authentication Endpoints
 
 ## 1. User Registration
+
 **POST** `/user/sign-up`
 
 Register a new user account.
 
 ### Request Body
+
 ```json
 {
   "fullName": "John Doe",
@@ -66,6 +76,7 @@ Register a new user account.
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -76,11 +87,13 @@ Register a new user account.
 ---
 
 ## 2. Email Verification
+
 **POST** `/auth/verify-email`
 
 Verify user email with OTP code.
 
 ### Request Body
+
 ```json
 {
   "email": "john@example.com",
@@ -89,6 +102,7 @@ Verify user email with OTP code.
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -110,11 +124,13 @@ Verify user email with OTP code.
 ---
 
 ## 3. User Login
+
 **POST** `/auth/sign-in`
 
 Authenticate user and get access tokens.
 
 ### Request Body
+
 ```json
 {
   "email": "john@example.com",
@@ -123,6 +139,7 @@ Authenticate user and get access tokens.
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -147,11 +164,13 @@ Authenticate user and get access tokens.
 ---
 
 ## 4. Refresh Token
+
 **POST** `/auth/refresh-token`
 
 Get new access token using refresh token.
 
 ### Request Body
+
 ```json
 {
   "token": "refresh_token_here"
@@ -159,6 +178,7 @@ Get new access token using refresh token.
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -172,11 +192,13 @@ Get new access token using refresh token.
 ---
 
 ## 5. Forgot Password
+
 **POST** `/auth/forgot-password`
 
 Request password reset OTP.
 
 ### Request Body
+
 ```json
 {
   "email": "john@example.com"
@@ -184,6 +206,7 @@ Request password reset OTP.
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -194,16 +217,19 @@ Request password reset OTP.
 ---
 
 ## 6. Reset Password
+
 **POST** `/auth/reset-password`
 
 Reset password using OTP.
 
 ### Headers
+
 ```
 Authorization: Bearer <reset_token>
 ```
 
 ### Request Body
+
 ```json
 {
   "newPassword": "newpassword123",
@@ -212,6 +238,7 @@ Authorization: Bearer <reset_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -222,16 +249,19 @@ Authorization: Bearer <reset_token>
 ---
 
 ## 7. Change Password
+
 **POST** `/auth/change-password`
 
 Change password for authenticated user.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Request Body
+
 ```json
 {
   "currentPassword": "oldpassword123",
@@ -241,6 +271,7 @@ Authorization: Bearer <access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -251,11 +282,13 @@ Authorization: Bearer <access_token>
 ---
 
 ## 8. Resend OTP
+
 **POST** `/auth/resend-otp`
 
 Resend verification OTP to email.
 
 ### Request Body
+
 ```json
 {
   "email": "john@example.com"
@@ -263,6 +296,7 @@ Resend verification OTP to email.
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -275,16 +309,19 @@ Resend verification OTP to email.
 # User Management Endpoints
 
 ## 1. Get Current User Profile
+
 **GET** `/user/me`
 
 Get authenticated user's profile information.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -318,17 +355,20 @@ Authorization: Bearer <access_token>
 ---
 
 ## 2. Update User Profile
+
 **PATCH** `/user/profile-update`
 
 Update user profile information.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 Content-Type: multipart/form-data
 ```
 
 ### Request Body (Form Data)
+
 ```
 data: {
   "fullName": "John Updated",
@@ -338,6 +378,7 @@ data: {
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -355,22 +396,26 @@ data: {
 ---
 
 ## 3. Update Profile Image
+
 **PATCH** `/user/profile-image`
 
 Update user profile image.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 Content-Type: multipart/form-data
 ```
 
 ### Request Body (Form Data)
+
 ```
 image: <image_file>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -385,19 +430,23 @@ image: <image_file>
 ---
 
 ## 4. Search Users by Phone
+
 **GET** `/user/search?searchTerm=123456`
 
 Search users by phone number or name.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Query Parameters
+
 - `searchTerm` (string): Search term for phone number or name
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -417,16 +466,19 @@ Authorization: Bearer <access_token>
 ---
 
 ## 5. Delete User Account
+
 **DELETE** `/user/account`
 
 Delete current user's account.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -439,16 +491,19 @@ Authorization: Bearer <access_token>
 # Admin User Management
 
 ## 1. Get All Users (Admin)
+
 **GET** `/user/all`
 
 Get all users with pagination and filtering.
 
 ### Headers
+
 ```
 Authorization: Bearer <admin_access_token>
 ```
 
 ### Query Parameters
+
 - `page` (number): Page number (default: 1)
 - `limit` (number): Items per page (default: 10)
 - `role` (string): Filter by role (USER, ADMIN, SUPER_ADMIN)
@@ -458,6 +513,7 @@ Authorization: Bearer <admin_access_token>
 - `search` (string): Search in name, email, or phone
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -492,16 +548,19 @@ Authorization: Bearer <admin_access_token>
 ## 1. Online Status Management
 
 ### Get Online Users
+
 **GET** `/online-status/online-users`
 
 Get list of currently online users.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -523,11 +582,13 @@ Authorization: Bearer <access_token>
 ```
 
 ### Get Online Users Count
+
 **GET** `/online-status/online-count`
 
 Get count of online users.
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -539,11 +600,13 @@ Get count of online users.
 ```
 
 ### Check User Online Status
+
 **GET** `/online-status/user/:userId/status`
 
 Check if specific user is online.
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -557,16 +620,19 @@ Check if specific user is online.
 ```
 
 ### Update User Activity (Heartbeat)
+
 **POST** `/online-status/heartbeat`
 
 Update user's last activity timestamp.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -579,16 +645,19 @@ Authorization: Bearer <access_token>
 ## 2. Notifications System
 
 ### Get User Notifications
+
 **GET** `/notifications/my-notifications`
 
 Get user's notifications with pagination.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Query Parameters
+
 - `page` (number): Page number
 - `limit` (number): Items per page
 - `type` (string): Filter by type (INFO, SUCCESS, WARNING, ERROR, etc.)
@@ -596,6 +665,7 @@ Authorization: Bearer <access_token>
 - `priority` (string): Filter by priority (LOW, MEDIUM, HIGH, URGENT)
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -629,11 +699,13 @@ Authorization: Bearer <access_token>
 ```
 
 ### Mark Notification as Read
+
 **PATCH** `/notifications/:id/read`
 
 Mark specific notification as read.
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -647,11 +719,13 @@ Mark specific notification as read.
 ```
 
 ### Mark All Notifications as Read
+
 **PATCH** `/notifications/mark-all-read`
 
 Mark all user notifications as read.
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -663,11 +737,13 @@ Mark all user notifications as read.
 ```
 
 ### Register Device Token
+
 **POST** `/notifications/device-token/register`
 
 Register device token for push notifications.
 
 ### Request Body
+
 ```json
 {
   "token": "firebase_device_token",
@@ -676,6 +752,7 @@ Register device token for push notifications.
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -684,16 +761,19 @@ Register device token for push notifications.
 ```
 
 ### Send Bulk Notifications (Admin)
+
 **POST** `/notifications/bulk-send`
 
 Send notifications to multiple users.
 
 ### Headers
+
 ```
 Authorization: Bearer <admin_access_token>
 ```
 
 ### Request Body
+
 ```json
 {
   "userIds": ["user1", "user2", "user3"],
@@ -709,6 +789,7 @@ Authorization: Bearer <admin_access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -721,16 +802,19 @@ Authorization: Bearer <admin_access_token>
 ## 3. Activity Tracking
 
 ### Get User Activities
+
 **GET** `/activity-logs/my-activities`
 
 Get current user's activity history.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Query Parameters
+
 - `page` (number): Page number
 - `limit` (number): Items per page
 - `action` (string): Filter by action type
@@ -739,6 +823,7 @@ Authorization: Bearer <access_token>
 - `endDate` (string): End date filter (ISO format)
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -769,30 +854,37 @@ Authorization: Bearer <access_token>
 ```
 
 ### Get All Activities (Admin)
+
 **GET** `/activity-logs/all`
 
 Get all user activities (Admin only).
 
 ### Headers
+
 ```
 Authorization: Bearer <admin_access_token>
 ```
 
 ### Query Parameters
+
 Same as user activities plus:
+
 - `user` (string): Filter by specific user ID
 
 ### Get Activity Statistics
+
 **GET** `/activity-logs/stats`
 
 Get activity statistics and analytics.
 
 ### Headers
+
 ```
 Authorization: Bearer <admin_access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -826,16 +918,19 @@ Authorization: Bearer <admin_access_token>
 # Messaging System
 
 ## 1. Get Messages
+
 **GET** `/messages/messages?senderId=user1&receiverId=user2`
 
 Get messages between two users.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Query Parameters
+
 - `senderId` (string, required): Sender user ID
 - `receiverId` (string, required): Receiver user ID
 - `page` (number): Page number
@@ -843,6 +938,7 @@ Authorization: Bearer <access_token>
 - `searchTerm` (string): Search in messages
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -878,17 +974,20 @@ Authorization: Bearer <access_token>
 ---
 
 ## 2. Send Message with Image
+
 **POST** `/messages/message-with-image`
 
 Send a message with optional image attachment.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 Content-Type: multipart/form-data
 ```
 
 ### Request Body (Form Data)
+
 ```
 data: {
   "senderId": "sender_user_id",
@@ -899,6 +998,7 @@ image: <image_file> (optional)
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -920,17 +1020,20 @@ image: <image_file> (optional)
 # Blog Management
 
 ## 1. Create Blog Post (Admin)
+
 **POST** `/blog/create-blog`
 
 Create a new blog post.
 
 ### Headers
+
 ```
 Authorization: Bearer <admin_access_token>
 Content-Type: multipart/form-data
 ```
 
 ### Request Body (Form Data)
+
 ```
 data: {
   "title": "Blog Post Title",
@@ -940,6 +1043,7 @@ image: <image_file>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -959,15 +1063,18 @@ image: <image_file>
 ---
 
 ## 2. Get All Blog Posts
+
 **GET** `/blog/all-blogs`
 
 Get all blog posts with pagination.
 
 ### Query Parameters
+
 - `page` (number): Page number (default: 1)
 - `limit` (number): Items per page (default: 10)
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -1002,11 +1109,13 @@ Get all blog posts with pagination.
 # Subscription Management
 
 ## 1. Get Available Plans
+
 **GET** `/subscriptions/plans`
 
 Get all available subscription plans.
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -1035,16 +1144,19 @@ Get all available subscription plans.
 ---
 
 ## 2. Create Subscription
+
 **POST** `/subscriptions/create`
 
 Create a new subscription.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Request Body
+
 ```json
 {
   "plan": "basic",
@@ -1058,6 +1170,7 @@ Authorization: Bearer <access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -1078,16 +1191,19 @@ Authorization: Bearer <access_token>
 ---
 
 ## 3. Get Subscription Status
+
 **GET** `/subscriptions/status`
 
 Get current user's subscription status.
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -1119,11 +1235,13 @@ Authorization: Bearer <access_token>
 ## 1. Newsletter Management
 
 ### Subscribe to Newsletter
+
 **POST** `/news-letter/subscribe-newsletter`
 
 Subscribe to newsletter.
 
 ### Request Body
+
 ```json
 {
   "email": "john@example.com",
@@ -1132,6 +1250,7 @@ Subscribe to newsletter.
 ```
 
 ### Response
+
 ```json
 {
   "success": true,
@@ -1150,47 +1269,54 @@ Subscribe to newsletter.
 # WebSocket Events (Real-time)
 
 ## Connection
+
 Connect to WebSocket server at: `ws://localhost:5000`
 
 ## Events
 
 ### Client to Server
+
 - `register`: Register user for real-time updates
+
   ```javascript
   socket.emit('register', userId);
   ```
 
 - `sendMessage`: Send a message
+
   ```javascript
   socket.emit('sendMessage', {
     senderId: 'user1',
     receiverId: 'user2',
     message: 'Hello!',
-    image: 'optional_image_url'
+    image: 'optional_image_url',
   });
   ```
 
 - `activeChat`: Set active chat session
+
   ```javascript
   socket.emit('activeChat', {
     senderId: 'user1',
-    receiverId: 'user2'
+    receiverId: 'user2',
   });
   ```
 
 - `markAsRead`: Mark messages as read
+
   ```javascript
   socket.emit('markAsRead', {
     senderId: 'user1',
-    receiverId: 'user2'
+    receiverId: 'user2',
   });
   ```
 
 - `typing`: Indicate user is typing
+
   ```javascript
   socket.emit('typing', {
     senderId: 'user1',
-    receiverId: 'user2'
+    receiverId: 'user2',
   });
   ```
 
@@ -1200,6 +1326,7 @@ Connect to WebSocket server at: `ws://localhost:5000`
   ```
 
 ### Server to Client
+
 - `receiver-{userId}`: Receive new message
 - `message-sent`: Message delivery confirmation
 - `messages-read`: Messages marked as read
@@ -1214,24 +1341,25 @@ Connect to WebSocket server at: `ws://localhost:5000`
 
 # Error Codes
 
-| Status Code | Description |
-|-------------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 400 | Bad Request |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Not Found |
-| 409 | Conflict |
-| 422 | Validation Error |
-| 429 | Too Many Requests |
-| 500 | Internal Server Error |
+| Status Code | Description           |
+| ----------- | --------------------- |
+| 200         | Success               |
+| 201         | Created               |
+| 400         | Bad Request           |
+| 401         | Unauthorized          |
+| 403         | Forbidden             |
+| 404         | Not Found             |
+| 409         | Conflict              |
+| 422         | Validation Error      |
+| 429         | Too Many Requests     |
+| 500         | Internal Server Error |
 
 ---
 
 # Rate Limiting
 
 The API implements rate limiting to prevent abuse:
+
 - **General API**: 100 requests per minute per IP
 - **Authentication**: 50 requests per minute per IP
 - **File Upload**: 20 requests per minute per IP
@@ -1241,11 +1369,13 @@ The API implements rate limiting to prevent abuse:
 # File Upload Guidelines
 
 ## Supported File Types
+
 - **Images**: JPG, JPEG, PNG, WEBP, GIF
 - **Documents**: PDF
 - **Media**: MP4 (video), MP3 (audio)
 
 ## File Size Limits
+
 - **Images**: 5MB maximum
 - **Documents**: 10MB maximum
 - **Media files**: 50MB maximum
@@ -1259,8 +1389,8 @@ You can import this Postman collection to test all endpoints:
 ```json
 {
   "info": {
-    "name": "Whisky Cask Club API",
-    "description": "Complete API collection for Whisky Cask Club Backend",
+    "name": "Reusable Backend Template using express js",
+    "description": "Complete API collection for Reusable Backend Template using express js",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -1305,7 +1435,8 @@ PROD_WS_URL=wss://your-domain.com
 # Support
 
 For support and questions:
-- Email: support@whiskycaskclub.com
+
+- Email: nrbnayon@.com
 - Documentation: This file
 - Issues: Create an issue in the repository
 

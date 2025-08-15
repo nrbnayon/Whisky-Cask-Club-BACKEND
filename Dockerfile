@@ -6,7 +6,7 @@ FROM node:20-alpine AS development
 # Set working directory
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies including curl for health checks
 RUN apk add --no-cache \
     python3 \
     make \
@@ -16,29 +16,29 @@ RUN apk add --no-cache \
 
 # Copy package files
 COPY package*.json ./
-COPY pnpm-lock.yaml* ./
-
-# Install pnpm
-RUN npm install -g pnpm
 
 # Install dependencies
-RUN pnpm install
+RUN npm install
 
 # Copy source code
 COPY . .
 
-# Create uploads directory
-RUN mkdir -p uploads/images uploads/docs uploads/medias
+# Create uploads directory with proper permissions
+RUN mkdir -p uploads/images uploads/docs uploads/medias logs \
+    && chown -R node:node uploads logs
+
+# Switch to non-root user
+USER node
 
 # Expose port
 EXPOSE 5000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
-  CMD curl -f http://localhost:5000/ || exit 1
+  CMD curl -f http://localhost:5000/health || exit 1
 
 # Start development server
-CMD ["pnpm", "run", "dev"]
+CMD ["npm", "run", "dev"]
 
 # Production build stage
 FROM node:20-alpine AS build
@@ -54,51 +54,47 @@ RUN apk add --no-cache \
 
 # Copy package files
 COPY package*.json ./
-COPY pnpm-lock.yaml* ./
 
-# Install pnpm
-RUN npm install -g pnpm
-
-# Install dependencies
-RUN pnpm install --frozen-lockfile
+# Install all dependencies (including devDependencies)
+RUN npm ci --only=production=false
 
 # Copy source code
 COPY . .
 
 # Build application
-RUN pnpm run build
+RUN npm run build
+
+# Remove dev dependencies
+RUN npm prune --production
 
 # Production stage
 FROM node:20-alpine AS production
 
 # Create app user
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nodejs -u 1001
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
 
 WORKDIR /app
 
-# Install system dependencies
-RUN apk add --no-cache \
-    curl \
+# Install system dependencies including curl for health checks
+RUN apk add --no-cache curl \
     && rm -rf /var/cache/apk/*
 
 # Copy package files
 COPY package*.json ./
-COPY pnpm-lock.yaml* ./
-
-# Install pnpm
-RUN npm install -g pnpm
 
 # Install production dependencies only
-RUN pnpm install --frozen-lockfile --prod
+RUN npm ci --only=production && npm cache clean --force
 
 # Copy built application from build stage
 COPY --from=build --chown=nodejs:nodejs /app/dist ./dist
-COPY --from=build --chown=nodejs:nodejs /app/uploads ./uploads
 
-# Create necessary directories
-RUN mkdir -p logs uploads/images uploads/docs uploads/medias
-RUN chown -R nodejs:nodejs /app
+# Create necessary directories with proper permissions
+RUN mkdir -p logs uploads/images uploads/docs uploads/medias \
+    && chown -R nodejs:nodejs /app
+
+# Copy any static files or configs needed
+COPY --chown=nodejs:nodejs uploads ./uploads
 
 # Switch to non-root user
 USER nodejs
@@ -108,7 +104,7 @@ EXPOSE 5000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
-  CMD curl -f http://localhost:5000/ || exit 1
+  CMD curl -f http://localhost:5000/health || exit 1
 
 # Start production server
 CMD ["node", "dist/server.js"]

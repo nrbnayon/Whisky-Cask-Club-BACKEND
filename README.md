@@ -1,10 +1,11 @@
-# Whisky Cask Club Backend
+# Reusable Backend Template using express js
 
 A comprehensive, production-ready backend API built with Node.js, Express.js, MongoDB, Redis, and Socket.IO. This backend provides authentication, user management, real-time messaging, notifications, activity tracking, subscription management, and more.
 
 ## 🚀 Features
 
 ### Core Features
+
 - **Authentication & Authorization** - JWT-based auth with role-based access control
 - **User Management** - Complete user CRUD operations with profile management
 - **Real-time Messaging** - Socket.IO powered chat system
@@ -17,6 +18,7 @@ A comprehensive, production-ready backend API built with Node.js, Express.js, Mo
 - **Email System** - Transactional emails with templates
 
 ### Advanced Features
+
 - **Redis Caching** - High-performance caching layer
 - **Rate Limiting** - API protection with Nginx
 - **Real-time Updates** - WebSocket connections for live data
@@ -57,18 +59,21 @@ A comprehensive, production-ready backend API built with Node.js, Express.js, Mo
 ### Using Docker (Recommended)
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
-   cd whisky-backend
+   cd backend-template-db
    ```
 
 2. **Environment Setup**
+
    ```bash
    cp .env.example .env
    # Edit .env with your configuration
    ```
 
 3. **Start with Docker Compose**
+
    ```bash
    docker-compose up -d
    ```
@@ -81,11 +86,13 @@ A comprehensive, production-ready backend API built with Node.js, Express.js, Mo
 ### Manual Installation
 
 1. **Install dependencies**
+
    ```bash
    pnpm install
    ```
 
 2. **Start MongoDB and Redis**
+
    ```bash
    # MongoDB
    mongod --dbpath /path/to/data
@@ -95,6 +102,7 @@ A comprehensive, production-ready backend API built with Node.js, Express.js, Mo
    ```
 
 3. **Environment Setup**
+
    ```bash
    cp .env.example .env
    # Configure your environment variables
@@ -143,7 +151,7 @@ PORT=5000
 IP_ADDRESS=localhost
 
 # Database
-DATABASE_URL=mongodb://localhost:27017/whisky-backend
+DATABASE_URL=mongodb://localhost:27017/backend-template-db
 
 # Redis
 REDIS_HOST=localhost
@@ -184,6 +192,7 @@ ALLOWED_FILE_TYPES=image/jpeg,image/jpg,image/png,image/webp
 ## 🔌 API Endpoints
 
 ### Authentication
+
 - `POST /api/v1/auth/sign-in` - User login
 - `POST /api/v1/auth/verify-email` - Email verification
 - `POST /api/v1/auth/forgot-password` - Password reset request
@@ -192,6 +201,7 @@ ALLOWED_FILE_TYPES=image/jpeg,image/jpg,image/png,image/webp
 - `POST /api/v1/auth/refresh-token` - Refresh access token
 
 ### User Management
+
 - `POST /api/v1/user/sign-up` - User registration
 - `GET /api/v1/user/me` - Get current user
 - `PATCH /api/v1/user/profile-update` - Update profile
@@ -199,21 +209,25 @@ ALLOWED_FILE_TYPES=image/jpeg,image/jpg,image/png,image/webp
 - `DELETE /api/v1/user/account` - Delete account
 
 ### Real-time Features
+
 - `GET /api/v1/online-status/online-users` - Get online users
 - `POST /api/v1/online-status/heartbeat` - Update user activity
 - `GET /api/v1/notifications/my-notifications` - Get notifications
 - `POST /api/v1/notifications/device-token/register` - Register push token
 
 ### Activity Tracking
+
 - `GET /api/v1/activity-logs/my-activities` - Get user activities
 - `GET /api/v1/activity-logs/all` - Get all activities (Admin)
 - `GET /api/v1/activity-logs/stats` - Activity statistics
 
 ### Messaging
+
 - `GET /api/v1/messages/messages` - Get messages
 - `POST /api/v1/messages/message-with-image` - Send message with image
 
 ### Blog System
+
 - `POST /api/v1/blog/create-blog` - Create blog post (Admin)
 - `GET /api/v1/blog/all-blogs` - Get all blog posts
 - `GET /api/v1/blog/blog-details/:id` - Get blog post
@@ -221,6 +235,7 @@ ALLOWED_FILE_TYPES=image/jpeg,image/jpg,image/png,image/webp
 - `DELETE /api/v1/blog/delete-blog/:id` - Delete blog post (Admin)
 
 ### Subscriptions
+
 - `GET /api/v1/subscriptions/plans` - Get subscription plans
 - `POST /api/v1/subscriptions/create` - Create subscription
 - `GET /api/v1/subscriptions/status` - Get subscription status
@@ -231,6 +246,7 @@ ALLOWED_FILE_TYPES=image/jpeg,image/jpg,image/png,image/webp
 ### Socket.IO Events
 
 **Client to Server:**
+
 - `register` - Register user for real-time updates
 - `sendMessage` - Send a message
 - `activeChat` - Set active chat session
@@ -239,6 +255,7 @@ ALLOWED_FILE_TYPES=image/jpeg,image/jpg,image/png,image/webp
 - `heartbeat` - Keep user online
 
 **Server to Client:**
+
 - `receiver-{userId}` - Receive new message
 - `message-sent` - Message delivery confirmation
 - `user:online` - User came online
@@ -249,17 +266,21 @@ ALLOWED_FILE_TYPES=image/jpeg,image/jpg,image/png,image/webp
 ## 📊 Monitoring & Logging
 
 ### Health Checks
+
 - `GET /` - Basic health check
 - `GET /health` - Detailed health status
 
 ### Logging
+
 - **Development**: Console output with colors
 - **Production**: File-based logging with rotation
 - **Levels**: Error, Warn, Info, Debug
 - **Storage**: `logs/` directory with daily rotation
 
 ### Activity Tracking
+
 All user actions are automatically logged including:
+
 - Authentication events
 - Profile updates
 - Content creation/modification
@@ -283,6 +304,7 @@ All user actions are automatically logged including:
 ### Docker Deployment
 
 1. **Production Build**
+
    ```bash
    docker-compose -f docker-compose.prod.yml up -d
    ```
@@ -298,11 +320,13 @@ All user actions are automatically logged including:
 ### Manual Deployment
 
 1. **Build Application**
+
    ```bash
    pnpm run build
    ```
 
 2. **Start Production Server**
+
    ```bash
    pnpm start
    ```
@@ -341,13 +365,16 @@ pnpm lint:fix
 ## 🔧 Maintenance
 
 ### Cleanup Jobs
+
 Automated cleanup jobs run periodically:
+
 - **Activity Logs**: Cleaned every day (90-day retention)
 - **Notifications**: Expired notifications removed daily
 - **Offline Users**: Updated every 5 minutes
 - **File Cleanup**: Unused files removed weekly
 
 ### Database Maintenance
+
 ```bash
 # MongoDB maintenance
 db.runCommand({compact: "collection_name"})
@@ -372,6 +399,7 @@ This project is licensed under the ISC License - see the LICENSE file for detail
 ## 🆘 Support
 
 For support and questions:
+
 - Create an issue in the repository
 - Check the API documentation
 - Review the logs for debugging
@@ -379,6 +407,7 @@ For support and questions:
 ## 🔄 Changelog
 
 ### v1.0.0
+
 - Initial release with core features
 - Authentication and user management
 - Real-time messaging and notifications
