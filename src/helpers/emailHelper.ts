@@ -1,3 +1,4 @@
+// src\helpers\emailHelper.ts
 import nodemailer from 'nodemailer';
 import config from '../config';
 import { errorLogger, logger } from '../shared/logger';

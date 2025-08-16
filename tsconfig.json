@@ -1,21 +1,29 @@
 {
-  "include": ["src"], 
+  "include": ["src"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "ES2018",
-
     "module": "commonjs",
     "rootDir": "./src",
-
-    // "outFile": "./",
     "outDir": "./dist",
     "baseUrl": "./src",
+    "paths": {
+      "*": ["*"],
+      "app/*": ["app/*"],
+      "config/*": ["config/*"],
+      "helpers/*": ["helpers/*"],
+      "shared/*": ["shared/*"],
+      "enums/*": ["enums/*"],
+      "types/*": ["types/*"],
+      "util/*": ["util/*"],
+      "jobs/*": ["jobs/*"],
+      "routes/*": ["routes/*"],
+      "socket/*": ["socket/*"],
+      "DB/*": ["DB/*"]
+    },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-
-    /* Type Checking */
     "strict": true,
-
     "skipLibCheck": true
   }
 }

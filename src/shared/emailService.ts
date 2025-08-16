@@ -2,7 +2,7 @@
 import { logger } from './logger';
 import config from '../config';
 import { IUser } from '../app/modules/user/user.interface';
-import { transporter } from 'helpers/emailHelper';
+import { transporter } from '../helpers/emailHelper';
 
 type EmailType =
   | 'welcome'

@@ -1,0 +1,970 @@
+16/08/2025 17:28:17 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:114:20)
+Error: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:114:20)
+16/08/2025 17:28:17 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:114:20)
+16/08/2025 17:28:20 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:114:20)
+Error: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:114:20)
+16/08/2025 17:28:20 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'helpers/emailHelper'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.service.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.controller.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\shared\emailService.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-548114955859601.js:114:20)
+16/08/2025 17:34:17 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-4432186368061528.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-4432186368061528.js:114:20)
+Error: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-4432186368061528.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-4432186368061528.js:114:20)
+16/08/2025 17:34:17 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-4432186368061528.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-4432186368061528.js:114:20)
+16/08/2025 17:34:47 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+Error: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:34:47 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/auth'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:35:36 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:35:36 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:35:58 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:35:58 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:36:09 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:36:09 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/middlewares/checkSubscriptionExpiry'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:36:30 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:36:30 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-44245190517609445.js:114:20)
+16/08/2025 17:37:12 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-01930207781907689.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-01930207781907689.js:114:20)
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-01930207781907689.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-01930207781907689.js:114:20)
+16/08/2025 17:37:12 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-01930207781907689.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-01930207781907689.js:114:20)
+16/08/2025 17:42:35 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:42:35 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'app/modules/user/user.model'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:43:15 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:43:15 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:43:43 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:43:43 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:44:10 [nrb-nayon] ERROR: uncaughtException: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:44:10 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module 'shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:44:14 [nrb-nayon] ERROR: uncaughtException: Cannot find module '../shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module '../shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+Error: Cannot find module '../shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:44:14 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module '../shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module '../shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:44:24 [nrb-nayon] ERROR: uncaughtException: Cannot find module '../../.shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module '../../.shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+Error: Cannot find module '../../.shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:44:24 [nrb-nayon] ERROR: Uncaught Exception: Cannot find module '../../.shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+Error: Cannot find module '../../.shared/logger'
+Require stack:
+- D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app\modules\subscription\subscription.route.ts
+- D:\Whisky-Cask-Club-BACKEND\src\routes\index.ts
+- D:\Whisky-Cask-Club-BACKEND\src\app.ts
+- D:\Whisky-Cask-Club-BACKEND\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (D:\Whisky-Cask-Club-BACKEND\src\app\middlewares\checkSubscriptionExpiry.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (D:\Whisky-Cask-Club-BACKEND\node_modules\.pnpm\source-map-support@0.5.21\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)

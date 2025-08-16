@@ -1,8 +1,8 @@
 
 // src\app\middleware\checkSubscriptionExpiry.ts
-import { User } from "app/modules/user/user.model";
 import { Request, Response, NextFunction } from "express";
-import { logger } from "shared/logger";
+import { User } from "../modules/user/user.model";
+import { logger } from "../../shared/logger";
 
 export const checkSubscriptionExpiry = async (
   req: Request,
