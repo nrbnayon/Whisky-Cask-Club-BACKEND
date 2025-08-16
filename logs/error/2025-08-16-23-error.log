@@ -968,3 +968,4 @@ Require stack:
     at Module.m._compile (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:69:33)
     at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
     at require.extensions..jsx.require.extensions..js (C:\Users\user\AppData\Local\Temp\ts-node-dev-hook-6236147959377616.js:114:20)
+16/08/2025 17:45:14 [nrb-nayon] ERROR: [31m🤢 Failed to connect Database[39m

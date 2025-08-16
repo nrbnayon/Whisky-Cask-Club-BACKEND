@@ -1081,3 +1081,139 @@ Error: connect ECONNREFUSED 127.0.0.1:6379
 16/08/2025 19:12:42 [nrb-nayon] INFO: Firebase initialized successfully
 16/08/2025 17:44:01 [nrb-nayon] INFO: Firebase initialized successfully
 16/08/2025 17:44:27 [nrb-nayon] INFO: Firebase initialized successfully
+16/08/2025 17:44:44 [nrb-nayon] INFO: Firebase initialized successfully
+16/08/2025 17:46:20 [nrb-nayon] INFO: Firebase initialized successfully
+16/08/2025 17:46:23 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+16/08/2025 17:46:23 [nrb-nayon] INFO: [33m[39m
+[33m╔═════════════════════════════════════╗[39m
+[33m║  🚀 Server launched successfully!   ║[39m
+[33m║  🌐 Running on: 127.0.0.1:5000      ║[39m
+[33m╚═════════════════════════════════════╝[39m
+16/08/2025 17:46:24 [nrb-nayon] INFO: Activity log cleanup job scheduled
+16/08/2025 17:46:24 [nrb-nayon] INFO: Notification cleanup job scheduled
+16/08/2025 17:46:24 [nrb-nayon] INFO: Offline user cleanup job scheduled
+16/08/2025 17:46:24 [nrb-nayon] INFO: All cleanup jobs started
+16/08/2025 17:46:24 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:24 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:24 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:24 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:24 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:24 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:24 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:24 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:24 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:24 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:25 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:25 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:25 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:25 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:25 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:25 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:26 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:26 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:26 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:26 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:27 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:27 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:27 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:27 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:28 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:28 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:28 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:28 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:29 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:29 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:30 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:30 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:31 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:31 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:32 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:32 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:33 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:33 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:33 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:33 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:34 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:34 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:36 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:36 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:37 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:37 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:38 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:38 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:39 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:39 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:40 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:40 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:42 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:42 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:43 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:43 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:44 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:44 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:46 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:46 [nrb-nayon] WARN: Redis connection closed
+16/08/2025 17:46:47 [nrb-nayon] ERROR: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+16/08/2025 17:46:47 [nrb-nayon] WARN: Redis connection closed
