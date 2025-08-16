@@ -8,7 +8,6 @@ const activityLogSchema = new Schema<IActivityLog>(
       type: Schema.Types.ObjectId,
       ref: 'User',
       required: true,
-      index: true,
     },
     action: {
       type: String,
@@ -35,7 +34,6 @@ const activityLogSchema = new Schema<IActivityLog>(
         'SETTINGS_UPDATE',
         'OTHER'
       ],
-      index: true,
     },
     resource: {
       type: String,
@@ -51,11 +49,9 @@ const activityLogSchema = new Schema<IActivityLog>(
         'SETTINGS',
         'OTHER'
       ],
-      index: true,
     },
     resourceId: {
       type: Schema.Types.ObjectId,
-      index: true,
     },
     details: {
       type: Schema.Types.Mixed,
@@ -72,7 +68,6 @@ const activityLogSchema = new Schema<IActivityLog>(
     timestamp: {
       type: Date,
       default: Date.now,
-      index: true,
     },
     metadata: {
       type: Schema.Types.Mixed,

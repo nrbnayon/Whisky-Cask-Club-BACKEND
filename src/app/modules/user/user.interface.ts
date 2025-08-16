@@ -2,6 +2,12 @@
 import { Document, Model } from 'mongoose';
 import { USER_ROLES, STATUS } from '../../../enums/user';
 
+export interface IDeviceToken {
+  token: string;
+  platform: 'ios' | 'android' | 'web';
+  createdAt: Date;
+}
+
 export interface ISubscription {
   plan: string;
   status:
@@ -26,6 +32,12 @@ export interface ISubscription {
   metadata?: Record<string, any>;
 }
 
+export interface IAuthentication {
+  isResetPassword: boolean;
+  oneTimeCode?: number;
+  expireAt?: Date;
+}
+
 export interface IUser extends Document {
   fullName: string;
   email: string;
@@ -37,16 +49,15 @@ export interface IUser extends Document {
   phoneCountryCode?: string;
   isDeleted: boolean;
   verified: boolean;
+  isOnline: boolean;
+  lastSeen: Date;
+  deviceTokens: IDeviceToken[];
   isSubscribed: boolean;
   subscription?: ISubscription;
-  authentication?: {
-    isResetPassword: boolean;
-    oneTimeCode?: number;
-    expireAt?: Date;
-  };
+  authentication?: IAuthentication;
   createdAt: Date;
   updatedAt: Date;
-  subscriptionStatus?: string; 
+  subscriptionStatus?: string; // Virtual property
 }
 
 export interface UserModal extends Model<IUser> {

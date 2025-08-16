@@ -1,4 +1,4 @@
-// src/app/modules/subscription/subscription.routes.ts
+// src/app/modules/subscription/subscription.route.ts
 import { Router } from 'express';
 import { SubscriptionController } from './subscription.controller';
 import { SubscriptionValidation } from './subscription.validation';

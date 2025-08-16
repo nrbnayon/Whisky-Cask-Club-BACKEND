@@ -58,13 +58,9 @@ const subscriptionSchema = new Schema(
     },
     stripeSubscriptionId: {
       type: String,
-      sparse: true,
-      index: true,
     },
     stripeCustomerId: {
       type: String,
-      sparse: true,
-      index: true,
     },
     stripePriceId: {
       type: String,
@@ -143,49 +139,28 @@ const userSchema = new Schema<IUser, UserModal>(
     isOnline: {
       type: Boolean,
       default: false,
-      index: true,
     },
     lastSeen: {
       type: Date,
       default: Date.now,
     },
-    deviceTokens: [{
-      token: String,
-      platform: {
-        type: String,
-        enum: ['ios', 'android', 'web'],
-        default: 'web'
+    deviceTokens: [
+      {
+        token: String,
+        platform: {
+          type: String,
+          enum: ['ios', 'android', 'web'],
+          default: 'web',
+        },
+        createdAt: {
+          type: Date,
+          default: Date.now,
+        },
       },
-      createdAt: {
-        type: Date,
-        default: Date.now
-      }
-    }],
-    isOnline: {
-      type: Boolean,
-      default: false,
-      index: true,
-    },
-    lastSeen: {
-      type: Date,
-      default: Date.now,
-    },
-    deviceTokens: [{
-      token: String,
-      platform: {
-        type: String,
-        enum: ['ios', 'android', 'web'],
-        default: 'web'
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now
-      }
-    }],
+    ],
     isSubscribed: {
       type: Boolean,
       default: false,
-      index: true,
     },
     subscription: subscriptionSchema,
     authentication: {
@@ -213,10 +188,11 @@ const userSchema = new Schema<IUser, UserModal>(
   },
 );
 
-// Indexes for better performance
-userSchema.index({ email: 1 });
+// Indexes for better performance - removed duplicates
 userSchema.index({ phoneNumber: 1 });
 userSchema.index({ role: 1, status: 1 });
+userSchema.index({ isOnline: 1 });
+userSchema.index({ isSubscribed: 1 });
 userSchema.index({ 'subscription.stripeCustomerId': 1 });
 userSchema.index({ 'subscription.stripeSubscriptionId': 1 });
 userSchema.index({ 'subscription.endDate': 1, isSubscribed: 1 });

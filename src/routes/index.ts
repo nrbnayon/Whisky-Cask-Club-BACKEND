@@ -1,3 +1,4 @@
+// src/routes/index.ts
 import express from 'express';
 import { AuthRoutes } from '../app/modules/auth/auth.route';
 import { UserRoutes } from '../app/modules/user/user.route';
@@ -7,7 +8,7 @@ import { aboutRoutes } from '../app/modules/aboutUs/aboutUs.route';
 import { tersmConditionRoutes } from '../app/modules/termsAndCondition/termsAndCondition.route';
 import { NewsLetterRoutes } from '../app/modules/newsLetter/newsLetter.route';
 import { BlogRoutes } from '../app/modules/blog/blog.route';
-import { SubscriptionRoutes } from 'app/modules/subscription/subscription.route';
+import { SubscriptionRoutes } from '../app/modules/subscription/subscription.route';
 import { MessageRoutes } from '../app/modules/message/message.route';
 import { ActivityLogRoutes } from '../app/modules/activityLog/activityLog.route';
 import { NotificationRoutes } from '../app/modules/notification/notification.route';

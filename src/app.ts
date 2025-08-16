@@ -5,7 +5,7 @@ import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import router from './routes';
 import { Morgan } from './shared/morgen';
 import notFoundRoute from './app/middlewares/notFoundRoute';
-import { SubscriptionController } from 'app/modules/subscription/subscription.controller';
+// import { SubscriptionController } from 'app/modules/subscription/subscription.controller';
 
 const app = express();
 
@@ -22,11 +22,11 @@ app.use(
 );
 
 // Webhook handler with raw body parsing - MUST be before other body parsers
-app.post(
-  '/my-webhook/stripe',
-  express.raw({ type: 'application/json' }),
-  SubscriptionController.handleWebhook,
-);
+// app.post(
+//   '/my-webhook/stripe',
+//   express.raw({ type: 'application/json' }),
+//   SubscriptionController.handleWebhook,
+// );
 
 // JSON and text/plain content types
 app.use(express.json({ limit: '200mb' }));

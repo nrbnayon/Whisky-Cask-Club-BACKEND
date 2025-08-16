@@ -1,5 +1,5 @@
 // src/app/modules/user/user.route.ts
-import express from 'express';
+import { Router } from 'express';
 import fileUploadHandler from '../../middlewares/fileUploadHandler';
 import { UserController } from './user.controller';
 import { UserValidation } from './user.validation';
@@ -7,7 +7,7 @@ import validateRequest from '../../middlewares/validateRequest';
 import auth from '../../middlewares/auth';
 import { USER_ROLES } from '../../../enums/user';
 
-const router = express.Router();
+const router = Router();
 
 // Public routes
 router.post(

@@ -8,12 +8,10 @@ const notificationSchema = new Schema<INotification>(
       type: Schema.Types.ObjectId,
       ref: 'User',
       required: true,
-      index: true,
     },
     sender: {
       type: Schema.Types.ObjectId,
       ref: 'User',
-      index: true,
     },
     title: {
       type: String,
@@ -29,7 +27,6 @@ const notificationSchema = new Schema<INotification>(
       type: String,
       enum: ['INFO', 'SUCCESS', 'WARNING', 'ERROR', 'SUBSCRIPTION', 'MESSAGE', 'BLOG', 'SYSTEM'],
       default: 'INFO',
-      index: true,
     },
     data: {
       type: Schema.Types.Mixed,
@@ -38,7 +35,6 @@ const notificationSchema = new Schema<INotification>(
     isRead: {
       type: Boolean,
       default: false,
-      index: true,
     },
     readAt: {
       type: Date,
@@ -47,11 +43,9 @@ const notificationSchema = new Schema<INotification>(
       type: String,
       enum: ['LOW', 'MEDIUM', 'HIGH', 'URGENT'],
       default: 'MEDIUM',
-      index: true,
     },
     expiresAt: {
       type: Date,
-      index: true,
     },
     actionUrl: {
       type: String,
