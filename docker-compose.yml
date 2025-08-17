@@ -1,30 +1,5 @@
-version: '3.8'
-
 services:
-  # MongoDB Database
-  mongodb:
-    image: mongo:7.0
-    container_name: backend-mongodb
-    restart: unless-stopped
-    ports:
-      - '27017:27017'
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password123
-      MONGO_INITDB_DATABASE: backend-template-db
-    volumes:
-      - mongodb_data:/data/db
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-    networks:
-      - template-network
-    healthcheck:
-      test: ['CMD', 'mongosh', '--eval', "db.adminCommand('ping')"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-      start_period: 30s
-
-  # Redis Cache
+  # Redis Cache (Keep this)
   redis:
     image: redis:7-alpine
     container_name: template-redis
@@ -37,7 +12,7 @@ services:
     networks:
       - template-network
     healthcheck:
-      test: ['CMD', 'redis-cli', '--raw', 'incr', 'ping']
+      test: ['CMD', 'redis-cli', 'AUTH', 'redis123']
       interval: 30s
       timeout: 10s
       retries: 5
@@ -53,37 +28,28 @@ services:
     restart: unless-stopped
     ports:
       - '5000:5000'
-    environment:
-      NODE_ENV: development
-      PORT: 5000
-      IP_ADDRESS: 0.0.0.0
-      DATABASE_URL: mongodb://admin:password123@mongodb:27017/backend-template-db?authSource=admin
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-      REDIS_PASSWORD: redis123
-      REDIS_URL: redis://:redis123@redis:6379
     env_file:
       - .env
+    environment:
+      - DISABLE_REDIS=false
     volumes:
       - .:/app
       - /app/node_modules
       - ./uploads:/app/uploads
       - template_logs:/app/logs
     depends_on:
-      mongodb:
-        condition: service_healthy
       redis:
         condition: service_healthy
     networks:
       - template-network
     healthcheck:
-      test: ['CMD', 'curl', '-f', 'http://localhost:5000/']
+      test: ['CMD', 'curl', '-f', 'http://localhost:5000/health']
       interval: 30s
       timeout: 10s
       retries: 5
       start_period: 60s
 
-  # Nginx Reverse Proxy (Optional)
+  # Nginx Reverse Proxy
   nginx:
     image: nginx:alpine
     container_name: template-nginx
@@ -100,8 +66,6 @@ services:
       - template-network
 
 volumes:
-  mongodb_data:
-    driver: local
   redis_data:
     driver: local
   template_logs:

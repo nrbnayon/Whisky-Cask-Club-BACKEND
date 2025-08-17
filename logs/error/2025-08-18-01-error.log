@@ -1,0 +1,6 @@
+18/08/2025 19:47:17 [nrb-nayon] ERROR: 🚨 globalErrorHandler ~~  You provided wrong otp
+Error: You provided wrong otp
+    at Object.verifyEmailToDB (D:\Backend-Template\src\app\modules\auth\auth.service.ts:130:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\Backend-Template\src\app\modules\auth\auth.controller.ts:13:18
+18/08/2025 19:47:17 [nrb-nayon] ERROR: 127.0.0.1 - POST /api/v1/auth/verify-email 400 - 114.441 ms
