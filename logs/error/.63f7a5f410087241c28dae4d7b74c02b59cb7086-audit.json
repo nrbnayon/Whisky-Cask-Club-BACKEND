@@ -29,6 +29,11 @@
             "date": 1755365296802,
             "name": "D:\\Whisky-Cask-Club-BACKEND\\logs\\error\\2025-08-16-23-error.log",
             "hash": "f077a5a57d5d34ce2855e683a0ce22ac825524c17429aeed90ab28e61244a30a"
+        },
+        {
+            "date": 1755421680641,
+            "name": "D:\\Whisky-Cask-Club-BACKEND\\logs\\error\\2025-08-17-15-error.log",
+            "hash": "ee2ab17143a38670bba46b5cc642966e0bffba64c7b86a26ec6823d6a7e1c895"
         }
     ],
     "hashType": "sha256"

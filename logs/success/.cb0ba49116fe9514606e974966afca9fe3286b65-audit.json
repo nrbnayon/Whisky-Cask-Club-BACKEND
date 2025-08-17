@@ -6,11 +6,6 @@
     "auditLog": "D:\\Whisky-Cask-Club-BACKEND\\logs\\success\\.cb0ba49116fe9514606e974966afca9fe3286b65-audit.json",
     "files": [
         {
-            "date": 1754809682573,
-            "name": "D:\\Whisky-Cask-Club-BACKEND\\logs\\success\\2025-08-10-13-success.log",
-            "hash": "f00d1af55aa6a1868dddae4cb72338ae0b22f87a6cefd3ef09f3d4559d59abda"
-        },
-        {
             "date": 1755283065482,
             "name": "D:\\Whisky-Cask-Club-BACKEND\\logs\\success\\2025-08-16-00-success.log",
             "hash": "4e30b4f82c46a96905549a8533a4ebdab8f7979bde2413e0cd3f6ff4f49d89ae"
@@ -24,6 +19,11 @@
             "date": 1755365296793,
             "name": "D:\\Whisky-Cask-Club-BACKEND\\logs\\success\\2025-08-16-23-success.log",
             "hash": "83cc0ad6201649a550477603bf14ef2d187b32de49e5d31c97c0dc4ac00ea844"
+        },
+        {
+            "date": 1755421680611,
+            "name": "D:\\Whisky-Cask-Club-BACKEND\\logs\\success\\2025-08-17-15-success.log",
+            "hash": "f5f659b29696cabdcd4f5b900606022b237bbf806fedc74a5658ecf701a8567a"
         }
     ],
     "hashType": "sha256"

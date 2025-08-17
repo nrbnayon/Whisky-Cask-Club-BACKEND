@@ -14,14 +14,11 @@ import {
   ILoginData,
   IVerifyEmail,
 } from '../../../types/auth';
-// import cryptoToken from '../../../util/cryptoToken';
 import generateOTP from '../../../util/generateOTP';
 
 import { User } from '../user/user.model';
 import { ResetToken } from '../resetToken/resetToken.model';
 import AppError from '../../errors/AppError';
-import unlinkFile from '../../../shared/unlinkFile';
-import { downloadImage, facebookToken } from './auth.lib';
 
 //login
 const loginUserFromDB = async (payload: ILoginData) => {
@@ -100,6 +97,8 @@ const forgetPasswordToDB = async (email: string) => {
 const verifyEmailToDB = async (payload: IVerifyEmail) => {
   const { email, oneTimeCode } = payload;
 
+  console.log('Get email and otp::', email, oneTimeCode);
+
   const isExistUser = await User.findOne({ email }).select('+authentication');
   if (!isExistUser) {
     throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
@@ -112,13 +111,32 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
     );
   }
 
-  // console.log(isExistUser.authentication?.oneTimeCode, { payload });
-  if (isExistUser.authentication?.oneTimeCode !== oneTimeCode) {
+  // Check if authentication exists and has the required properties
+  if (!isExistUser.authentication) {
+    throw new AppError(
+      StatusCodes.BAD_REQUEST,
+      'Authentication data not found',
+    );
+  }
+
+  console.log(
+    'Stored OTP:',
+    isExistUser.authentication.oneTimeCode,
+    'Provided OTP:',
+    oneTimeCode,
+  );
+
+  if (isExistUser.authentication.oneTimeCode !== oneTimeCode) {
     throw new AppError(StatusCodes.BAD_REQUEST, 'You provided wrong otp');
   }
 
+  // Check if expireAt exists before comparison
+  if (!isExistUser.authentication.expireAt) {
+    throw new AppError(StatusCodes.BAD_REQUEST, 'OTP expiration time not set');
+  }
+
   const date = new Date();
-  if (date > isExistUser.authentication?.expireAt) {
+  if (date > isExistUser.authentication.expireAt) {
     throw new AppError(
       StatusCodes.BAD_REQUEST,
       'Otp already expired, Please try again',
@@ -167,7 +185,6 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
       },
     );
 
-    // const createToken = cryptoToken();
     await ResetToken.create({
       user: isExistUser._id,
       token: accessToken,

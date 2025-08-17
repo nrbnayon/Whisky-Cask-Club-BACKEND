@@ -7,7 +7,9 @@ import config from '../../../config';
 import AppError from '../../errors/AppError';
 
 const verifyEmail = catchAsync(async (req: Request, res: Response) => {
-  const { ...verifyData } = req.body;
+  const verifyData = req.body;
+  console.log('Get email and otp::', verifyData);
+
   const result = await AuthService.verifyEmailToDB(verifyData);
 
   sendResponse(res, {

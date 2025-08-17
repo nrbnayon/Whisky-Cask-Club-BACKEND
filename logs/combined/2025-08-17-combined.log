@@ -1,0 +1,67 @@
+17/08/2025 09:08:04 [nrb-nayon] INFO: Firebase initialized successfully
+17/08/2025 09:08:06 [nrb-nayon] INFO: [32m🚀 Database connected successfully[39m
+17/08/2025 09:08:06 [nrb-nayon] INFO: [33m[39m
+[33m╔═════════════════════════════════════╗[39m
+[33m║  🚀 Server launched successfully!   ║[39m
+[33m║  🌐 Running on: 127.0.0.1:5000      ║[39m
+[33m╚═════════════════════════════════════╝[39m
+17/08/2025 09:08:07 [nrb-nayon] INFO: Activity log cleanup job scheduled
+17/08/2025 09:08:07 [nrb-nayon] INFO: Notification cleanup job scheduled
+17/08/2025 09:08:07 [nrb-nayon] INFO: Offline user cleanup job scheduled
+17/08/2025 09:08:07 [nrb-nayon] INFO: All cleanup jobs started
+17/08/2025 09:08:10 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:10 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:12 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:12 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:14 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:14 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:17 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:17 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:19 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:19 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:22 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:22 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:25 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:25 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:27 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:27 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:30 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:30 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:33 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:33 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:35 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:35 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:38 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:38 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:41 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:41 [nrb-nayon] WARN: Redis connection closed
+17/08/2025 09:08:44 [nrb-nayon] ERROR: Redis connection error: getaddrinfo ENOTFOUND redis
+Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+17/08/2025 09:08:44 [nrb-nayon] WARN: Redis connection closed
